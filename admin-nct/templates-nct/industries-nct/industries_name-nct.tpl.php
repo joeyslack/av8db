@@ -1,0 +1,1 @@
+<input type="text" class="form-control logintextbox-bg required" name="industry_name[%ID%]" id="industry_name[%ID%]" value="%INDUSTRY_NAME%">

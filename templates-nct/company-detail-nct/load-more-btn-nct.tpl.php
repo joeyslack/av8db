@@ -1,0 +1,1 @@
+<div class="center-block text-right"><a href="<?php echo $this->load_more_url; ?>" title="{LBL_COM_DET_LOAD_MORE}">{LBL_COM_DET_LOAD_MORE} <i class="f"></i></a></div>

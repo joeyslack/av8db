@@ -1,0 +1,1 @@
+<a class="suggst-btn" href="javascript:void(0);" id="%ID%" data-value="%DATA_ID%"><i class="%CLASS%" title="%TITLE%"></i> %TEXT%</a>

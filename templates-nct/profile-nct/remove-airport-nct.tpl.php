@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" class="fa fa-close gray-text remove_airport"  data-airport-id="%ENC_AIRPORT_ID%"></a>

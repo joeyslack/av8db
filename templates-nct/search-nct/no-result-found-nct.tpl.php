@@ -1,0 +1,1 @@
+<div class="no-results">{LBL_NO_SEARCH_FOUND}</div>

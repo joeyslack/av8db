@@ -1,0 +1,1 @@
+<div class="no-results"><?php echo $this->message?></div>

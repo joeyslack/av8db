@@ -1,0 +1,1 @@
+<a data-value="%MAIM_ENCODED_ID%" href="javascript:void(0);" class="outer-red-btn" id="%ID%"><i class="%CLASS%"></i> %TEXT%</a>

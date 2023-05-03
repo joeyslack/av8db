@@ -1,0 +1,1 @@
+<a href="%HREF%" title="%TITLE%" id="%ID%"  data-toggle="tooltip" data-placement="left" data-id="%DATA-ID%"></a>

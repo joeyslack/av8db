@@ -1,0 +1,1 @@
+<div class="no-feeds">{MESSAGE_COMPANY_DETAIL_NO_REVIEWS_ADDED}</div>

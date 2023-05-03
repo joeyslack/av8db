@@ -1,0 +1,1 @@
+<a class="outer-blue-btn %DIRECT_JOB_APPLY% apply-url %HIDE_CLASS%" href="%HREF%" target="%TARGET%" id="%DIRECT_JOB_APPLY%" data-value="%ENCRYPTED_JOB_ID%">%HTML%</a>

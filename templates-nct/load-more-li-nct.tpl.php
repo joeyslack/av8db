@@ -1,0 +1,1 @@
+<li class="load-more"><a href="<?php echo $this->load_more_link; ?>" class="load_more" title="{LBL_LOAD_MORE}">{LBL_LOAD_MORE}</a></li>

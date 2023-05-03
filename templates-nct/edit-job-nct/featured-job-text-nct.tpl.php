@@ -1,0 +1,1 @@
+<label>{LBL_THIS_JOB_FEATURED} %DATE% (%REMAINING_DAYS%)</label>

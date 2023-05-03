@@ -1,0 +1,1 @@
+<button type="submit" class="blue-btn" name="add_airport_multiple" id="add_airport">{BTN_AIRPORT_ADD}</button>

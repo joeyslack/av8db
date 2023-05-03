@@ -1,0 +1,1 @@
+<div class="mdl-company-view fade fadeIn"><?php echo $this->companies; ?></div>

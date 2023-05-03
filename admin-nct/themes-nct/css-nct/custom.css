@@ -1,0 +1,28 @@
+/* here you can put your own css to customize and override the theme */
+
+.switch-3 label{
+  min-height: 28px;
+}
+.switch-3 label i{
+  margin-top: 5px;
+  color: #fff;
+}
+.switch-3 input:checked+label.success{
+  color: #fff;
+  background: #5cb85c;
+  text-align: center;
+}
+.switch-3 input:checked+label.danger{
+  color: #fff;
+  background: #d9534f;
+  text-align: center;
+}
+.switch-3 input:checked+label.pending{
+  color: #fff;
+  background: #85aec1;
+  text-align: center;
+}
+.switch-3.disabled{
+  opacity: .5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,1 @@
+<h3 class="purple-text">%STATUS_ACTIVITY%</h3>

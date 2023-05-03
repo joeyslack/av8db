@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" class="outer-red-btn" id="%ID%" data-value="%GROUP_ID%"><i class="%CLASS%"></i> %TEXT%</a>

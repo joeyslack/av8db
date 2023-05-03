@@ -1,0 +1,1 @@
+<a class="outer-blue-btn follow-btn %FOLLOW_COMPANY%" href="%HREF%" target="%TARGET%" id="%FOLLOW_COMPANY%" data-value="%ENCRYPTED_COMPANY_ID%">%HTML%</a>

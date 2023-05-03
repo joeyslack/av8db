@@ -1,0 +1,1 @@
+<input type="text" class="form-control logintextbox-bg required %NAME%" name="%NAME%" id="%NAME%" value="%CONSTANT_NAME%">

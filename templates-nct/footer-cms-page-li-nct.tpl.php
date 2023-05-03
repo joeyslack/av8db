@@ -1,0 +1,1 @@
+<li><a href="%PAGE_URL%" title="%PAGE_TITLE%" rel="nofollow" %EXTRA_ATTRIBUTE%>%PAGE_TITLE%</a></li>

@@ -1,0 +1,648 @@
+[09/20/2017 12:57 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: a7d30844ab
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-1.paypal.com
+X-EdgeConnect-MidMile-RTT: 14
+X-EdgeConnect-Origin-MEX-Latency: 602
+Date: Wed, 20 Sep 2017 07:27:28 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=NoMeoxPRqKtufavYvCT_xs6-syzbZmO8tQRaM2Dd0Dcyi4S_4mjkR9ssUMJDqCwGFM51FRh3HOMnO5NxStNXQiZclC-dVhqrZbb95UFoYD5Pb6rpSL_q92jc0MEfZJ3RHVCmJVstor0VHBxeriW3EerUWFqaZydwIrfnEr7a7UDR1VOjkYjIMiI6drD73XtwZc-Z_EmUzyY6jB8C8qInuX-1PY3XZ5WDdmhzyAQwf9fEw6afC14gjXF-AqZnhjojBPYn0AeBOviv01cNDIs__E3v8cWvxQ-fRFb1LXzMnbPe7xvRNVWWMrDmwD7up8-IHx4EmxqBZhZDBWHg7r8glPDJNyfGPl24emUTOpNmp7YG0N-0gT_39DVYGv3L6esmM6uFI3tUmttg4p89-Vftw7pPE2DAM8mIfSSi_Bd2r4hVvJjmDHFEXUkWYea; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:27:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:27:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D1612235353%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 07:57:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-1.paypal.com; expires=Wed, 20-Sep-2017 07:57:28 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893048~id=16c48c2ffb4eda837571fbda081aab04; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[09/20/2017 12:57 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: a7d30844ab
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-1.paypal.com
+X-EdgeConnect-MidMile-RTT: 14
+X-EdgeConnect-Origin-MEX-Latency: 602
+Date: Wed, 20 Sep 2017 07:27:28 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=NoMeoxPRqKtufavYvCT_xs6-syzbZmO8tQRaM2Dd0Dcyi4S_4mjkR9ssUMJDqCwGFM51FRh3HOMnO5NxStNXQiZclC-dVhqrZbb95UFoYD5Pb6rpSL_q92jc0MEfZJ3RHVCmJVstor0VHBxeriW3EerUWFqaZydwIrfnEr7a7UDR1VOjkYjIMiI6drD73XtwZc-Z_EmUzyY6jB8C8qInuX-1PY3XZ5WDdmhzyAQwf9fEw6afC14gjXF-AqZnhjojBPYn0AeBOviv01cNDIs__E3v8cWvxQ-fRFb1LXzMnbPe7xvRNVWWMrDmwD7up8-IHx4EmxqBZhZDBWHg7r8glPDJNyfGPl24emUTOpNmp7YG0N-0gT_39DVYGv3L6esmM6uFI3tUmttg4p89-Vftw7pPE2DAM8mIfSSi_Bd2r4hVvJjmDHFEXUkWYea; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:27:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:27:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D1612235353%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 07:57:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-1.paypal.com; expires=Wed, 20-Sep-2017 07:57:28 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893048~id=16c48c2ffb4eda837571fbda081aab04; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALIDHTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg11.slc
+Paypal-Debug-Id: 944994fbc6e51
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-1.paypal.com
+X-EdgeConnect-MidMile-RTT: 11
+X-EdgeConnect-Origin-MEX-Latency: 527
+Date: Wed, 20 Sep 2017 07:27:29 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=ZxMSI8IcqVwtDynkg3DWdD0fpuZhsXbNP3jnDQezpiA7Qd21XA0i54thgWg5ZJKrA5Ocwa2U0SMB4g5yktxgHGnJ2wLLJx6WmNxUOZmT8ntFKpQx_k6xjSzTNCWVPdfZwhYjj5AlDga2rKh2QdvuYV13m2RCuIs98Nq-ypXqYAGD5TH2O8GMb266st5CF4yNwQEGaB5Utg7ddz4GAQdg1h8KJa-4PYE38_j5TtIARRvY-gR8YNVIh7mau0ATVNsR00kRdEL7UhSoS_YCthuZ7QyYii02yEgleXFbHzX-VzpFMeenwquWpU3sUxNtNtcgZ6GAwvdFjvsM1HOcs7E16T_ZKOj2IpSlc8ijoVUfafxwAQJQIgabTRCz4pBtMA0NXnMQWKUrWt4AaYW4OVczyBi3Dv_UScjg9qvVsGcwI93whZEvfYS6fJRUgOy; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:27:29 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:27:29 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D1612235353%26HTTP_X_PP_AZ_LOCATOR%3Ddcg11.slc; Expires=Wed, 20 Sep 2017 07:57:29 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-1.paypal.com; expires=Wed, 20-Sep-2017 07:57:29 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893049~id=1dbae0af96179ff7aabdf7526d7085ca; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[09/20/2017 12:57 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: dee51f9827b0f
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-1.paypal.com
+X-EdgeConnect-MidMile-RTT: 12
+X-EdgeConnect-Origin-MEX-Latency: 560
+Date: Wed, 20 Sep 2017 07:27:33 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=tZ4ZHnsJ3NOFS66dXQ_J28PYinwA_15MoVFozsxGKB4Cl9ps0dPcgWriPVYJSow0V22WyhukeAClc3aHawIgw_jCYfjnHiQiv-_jleGSV_nh0Uk3LQLx37E_ydvXAwA4Os3s6L6QyS4NQDUswRspBcttVyjFUn1iwQflCpXxoyF4kkDroTJlEz-ZCVxznmDFCzuG5tsKvEBqi-R9vhXrVWzem3gRphJgucEN8imBeCztC4Hx6aEhUyC3Q38gCNxuBJimaRT-v2J2cb20zmLSblXWVxAPUdD7bTXz1K76bBu_8Q6oVTEx9zO0FDStMLHKGyyY6VdfGCnf4_pY5mxtCYArqwwe4RahDvmGdS-tyIeseS27KrcTp1pzl8xAfMl_f40C141oFT1C5IPkS-GidNTXKzh29YuZ99FeyrPk6cWBurduGXpeft2RSuS; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:27:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:27:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D1696121433%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 07:57:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-1.paypal.com; expires=Wed, 20-Sep-2017 07:57:33 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893053~id=544c5ece58fc88ba228b4b35134c9b14; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[09/20/2017 12:57 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: dee51f9827b0f
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-1.paypal.com
+X-EdgeConnect-MidMile-RTT: 12
+X-EdgeConnect-Origin-MEX-Latency: 560
+Date: Wed, 20 Sep 2017 07:27:33 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=tZ4ZHnsJ3NOFS66dXQ_J28PYinwA_15MoVFozsxGKB4Cl9ps0dPcgWriPVYJSow0V22WyhukeAClc3aHawIgw_jCYfjnHiQiv-_jleGSV_nh0Uk3LQLx37E_ydvXAwA4Os3s6L6QyS4NQDUswRspBcttVyjFUn1iwQflCpXxoyF4kkDroTJlEz-ZCVxznmDFCzuG5tsKvEBqi-R9vhXrVWzem3gRphJgucEN8imBeCztC4Hx6aEhUyC3Q38gCNxuBJimaRT-v2J2cb20zmLSblXWVxAPUdD7bTXz1K76bBu_8Q6oVTEx9zO0FDStMLHKGyyY6VdfGCnf4_pY5mxtCYArqwwe4RahDvmGdS-tyIeseS27KrcTp1pzl8xAfMl_f40C141oFT1C5IPkS-GidNTXKzh29YuZ99FeyrPk6cWBurduGXpeft2RSuS; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:27:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:27:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D1696121433%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 07:57:33 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-1.paypal.com; expires=Wed, 20-Sep-2017 07:57:33 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893053~id=544c5ece58fc88ba228b4b35134c9b14; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALIDHTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: 2e2d0483e4c2e
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-1.paypal.com
+X-EdgeConnect-MidMile-RTT: 12
+X-EdgeConnect-Origin-MEX-Latency: 543
+Date: Wed, 20 Sep 2017 07:27:34 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=eaeI4qLgL6IGhuIFZiY41QqVpaOnyBP2QF9fT7g0aA0smCWZgW1rW7ALvnSKQtFgYdsPnU5qjd_Y-3I5f1VspjximQsIBKCxMGRUBBr9EZpdPGQVgeWDbNUHGnX_M3qve_X_6Tzf9sq95kwAP0P_X6L7_8zvdW6SnqzWnEIIQiHCnThiTBjSdj8rXYDYipAxqNKpXTH0d_fSoLtvwjqjcz0C1n-p0obvZrAGko_Jh0-ih9wBiexMvD0W0k2JPXuBOg5_kSay2-8witziKV7IziJ2HlTma_SgxuEmT4vYPsdmYD4O3_ftnQZmZ5vxkom1FNuGwElll62L7EEeEmpMgpzJmx9nTs2IF6V8P05K4qQaz_6xgN_l3SApj5QdbTEJctvM04-MyPO1Lgelv35pKBHaFQ-fDS42qLF1kjy_85r9wki0S0BDIJALmZ4; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:27:34 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:27:34 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D1696121433%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 07:57:34 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-1.paypal.com; expires=Wed, 20-Sep-2017 07:57:34 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893054~id=b8cca02c1249ff2c3bfddcb760346ce7; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[09/20/2017 12:58 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: 400880787bed7
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-1.paypal.com
+X-EdgeConnect-MidMile-RTT: 11
+X-EdgeConnect-Origin-MEX-Latency: 509
+Date: Wed, 20 Sep 2017 07:28:49 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=GaPd2Q5Q5kgZbtUyGu4XPVrUbVk_wUrrxB0ecGTjr8WI3MLa3pdRqQPRCb95Ee_DjeUoHqvZdA9bJfkezTYX3fjh7u8AZBIcWm0HW9eJKMoNCJXNn4AhirfO7yp7T7g_5ve4dn0sVltRXqsgGhsysOTeXtBcAYw0xJLy86-6ydxSf59sfAygshQLy8W8ocIcgmUALU6f_YEh40Pcb5aTJAvRMK0-L9oLIsAonr4dUrDAGdQYBeYEKTmxAlwcfJkB5N0TXTa8nUz9B2kuFl4juXrk0WdwoaWAvlDdiMAv9yJI6TNnf4Q8fsGzAFj3aDxlc4PfyXBPkp798vId82QOoDb5jaEeMbschQszGlQGV9eWETE3VJMzw0b0mWD7U2_Smwc_qK_fbFhQ6obt2OB02dC5Dcvqq9JToM32NyXPW5-QK3hgTtLUC1eSnsu; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:28:49 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:28:49 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D2971189849%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 07:58:49 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-1.paypal.com; expires=Wed, 20-Sep-2017 07:58:49 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893129~id=121050dceb72497fe7aea5128085b426; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[09/20/2017 12:58 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: 400880787bed7
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-1.paypal.com
+X-EdgeConnect-MidMile-RTT: 11
+X-EdgeConnect-Origin-MEX-Latency: 509
+Date: Wed, 20 Sep 2017 07:28:49 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=GaPd2Q5Q5kgZbtUyGu4XPVrUbVk_wUrrxB0ecGTjr8WI3MLa3pdRqQPRCb95Ee_DjeUoHqvZdA9bJfkezTYX3fjh7u8AZBIcWm0HW9eJKMoNCJXNn4AhirfO7yp7T7g_5ve4dn0sVltRXqsgGhsysOTeXtBcAYw0xJLy86-6ydxSf59sfAygshQLy8W8ocIcgmUALU6f_YEh40Pcb5aTJAvRMK0-L9oLIsAonr4dUrDAGdQYBeYEKTmxAlwcfJkB5N0TXTa8nUz9B2kuFl4juXrk0WdwoaWAvlDdiMAv9yJI6TNnf4Q8fsGzAFj3aDxlc4PfyXBPkp798vId82QOoDb5jaEeMbschQszGlQGV9eWETE3VJMzw0b0mWD7U2_Smwc_qK_fbFhQ6obt2OB02dC5Dcvqq9JToM32NyXPW5-QK3hgTtLUC1eSnsu; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:28:49 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:28:49 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D2971189849%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 07:58:49 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-1.paypal.com; expires=Wed, 20-Sep-2017 07:58:49 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893129~id=121050dceb72497fe7aea5128085b426; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALIDHTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: 82bd038c46f68
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-2.paypal.com
+X-EdgeConnect-MidMile-RTT: 15
+X-EdgeConnect-Origin-MEX-Latency: 541
+Date: Wed, 20 Sep 2017 07:28:50 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=ZJ0nm--0gtPKhPjdo_bF79znITvyHKHNW4y07fgtXaLakRW4VmpXu0Fdx9hhnrWAQCy-htfk9qxbgsyIp-QIXu3RByx8vbRrIjPhm1P9yfWQMNSolurXREOTdm4CyPI5lmnZAalDNXIemIvIZp3v7bvMLd-83DDIUDVf-JeIwDnDip8GZ1uCQsnnmuQNToHNfjAPs3o87scB6eLvhrl5FMYs1el27SsXcWAAo9_Z0sZd6Bs10KTm52IsHEk7us3jyGc4C1Hz0kY_pIk1W8CKzQytvO_8CrGfwWc6fHRuLD8tRffL3RJwzo9CwPYnTSfJvR2G_HG58VwmEBrVxOINolj0oNKGxmU2ao4rxordqND9wb25KX9ozDnamVPsaDKB4QPvXigjRLTSW4pAocUm4LvqG6nfWDMSYjAsENbxOaAMY72nQ3cztVoFuZy; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:28:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:28:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D2987967065%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 07:58:50 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-2.paypal.com; expires=Wed, 20-Sep-2017 07:58:50 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893130~id=6670d5c678bb117c7fde005849b4c10e; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[09/20/2017 1:06 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: 95664f48cbd5
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-2.paypal.com
+X-EdgeConnect-MidMile-RTT: 12
+X-EdgeConnect-Origin-MEX-Latency: 536
+Date: Wed, 20 Sep 2017 07:36:28 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=_Ur1obNn0vIwNDORDr-09TFGrcMFxBIgiDyRVbINTtRSjDbveOQ4RbxDdqqBPA8v4yAR-2sm3WVfYt6cqixdqzbIsU0nUxx55QpQKm6TsZg-snORr2yorVPiF70WPFaLHMSQiAg3eV3dvi67hmGcrHH4UbjGsMMF1vzWMxuxnx8VbKFwQ8wZ9cplOTZAHxsJXov9jOa-vC7hmxWNWBw9foJXStXm6miqeYzRpc5-7KOpQQ9Y0mfEDl8WkKFmaJUxH6W2Z-AKB6_YSZUkXYOtMgs2MLwL3nS3lM6QijhN-GjFhFsW1WFp9nnJlFBM8_soT-RHyd9EgHnvNowKbh7GuqtRUV1Sa3qS08Xo28eXrLC5yKs_sgtfZmNrKFxzJ71v-moGYN_r4WJKgvjJmUCguf3Aokoa4DWuTBjXIK0GJVl9UICwpRMvQ2jlP1C; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:36:27 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:36:27 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D2065351257%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 08:06:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-2.paypal.com; expires=Wed, 20-Sep-2017 08:06:28 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893588~id=443cd0057cedc4460efced1b049e29db; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[09/20/2017 1:06 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: 95664f48cbd5
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-2.paypal.com
+X-EdgeConnect-MidMile-RTT: 12
+X-EdgeConnect-Origin-MEX-Latency: 536
+Date: Wed, 20 Sep 2017 07:36:28 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=_Ur1obNn0vIwNDORDr-09TFGrcMFxBIgiDyRVbINTtRSjDbveOQ4RbxDdqqBPA8v4yAR-2sm3WVfYt6cqixdqzbIsU0nUxx55QpQKm6TsZg-snORr2yorVPiF70WPFaLHMSQiAg3eV3dvi67hmGcrHH4UbjGsMMF1vzWMxuxnx8VbKFwQ8wZ9cplOTZAHxsJXov9jOa-vC7hmxWNWBw9foJXStXm6miqeYzRpc5-7KOpQQ9Y0mfEDl8WkKFmaJUxH6W2Z-AKB6_YSZUkXYOtMgs2MLwL3nS3lM6QijhN-GjFhFsW1WFp9nnJlFBM8_soT-RHyd9EgHnvNowKbh7GuqtRUV1Sa3qS08Xo28eXrLC5yKs_sgtfZmNrKFxzJ71v-moGYN_r4WJKgvjJmUCguf3Aokoa4DWuTBjXIK0GJVl9UICwpRMvQ2jlP1C; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:36:27 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:36:27 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D2065351257%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 08:06:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-2.paypal.com; expires=Wed, 20-Sep-2017 08:06:28 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893588~id=443cd0057cedc4460efced1b049e29db; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALIDHTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg11.slc
+Paypal-Debug-Id: f9099e8b60fcf
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: phx-origin-www-2.paypal.com
+X-EdgeConnect-MidMile-RTT: 12
+X-EdgeConnect-Origin-MEX-Latency: 482
+Date: Wed, 20 Sep 2017 07:36:28 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=D1M9AORMhBfH2el5amFWJeZOMoXAVDKKvP08-7OoGdOFEdbgozAjmmHaiQuiZmYGv_G-iMoeUb3EQ83yY0ROPMj6EOi5sL27Ejg5WvvzXDu9NxhUMcqwYeV-niL-gYRoB3xbB6chLemZiAdOXmdAI_NPffic60ZlzmYhY82Zw4jExr2f0ogPKoGRgOQrJhHM8bwk9NkYPt5wLhhBA77BQ2RbeopKKhm7DuX_3BxEzFD0kWalsfF6e1iZ5VR5dN9JYpyiWQ-vwAcS7GWUbjCu5bu7L6W_U-fP5Wbe2DK3qVs_OAjejDBUBlMj8h5LWjKUPpAW3K58rNfbphmsbv-TYNfB2PV9dBG-Bmq8L7t_RsxXb8hpe1udHl1QHygQ6fsGJEB6Wqpw2sjes_scDbWefUTQz2SuzX9ikzhTsdMxM2kg4B9GokUq1ZXGOy8; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:36:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:36:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE3.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D2082128473%26HTTP_X_PP_AZ_LOCATOR%3Ddcg11.slc; Expires=Wed, 20 Sep 2017 08:06:28 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=phx-origin-www-2.paypal.com; expires=Wed, 20-Sep-2017 08:06:28 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893588~id=443cd0057cedc4460efced1b049e29db; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[09/20/2017 1:09 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: b6043ef17b10
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: slc-b-origin-www-2.paypal.com
+X-EdgeConnect-MidMile-RTT: 8
+X-EdgeConnect-Origin-MEX-Latency: 453
+Date: Wed, 20 Sep 2017 07:39:23 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=b4CaBDBfRtnRr1lXzeG7W4hCS9sipT5fY7Y9CvGz6dGzSHbzdAEHxFcAQOaD1Jv1Ut1zfr6N3geVLFw92OJj06O5uD9SEfn3oWyInNeBtgHRNCPAVQoPM0fPPEC_VAwbFMtzPCNZG6UyURS23Qw5StqxHCPMHg91ZmL5z30k8AEa1AHT1pjnnPaPad1F0QBtvq9XLcWu9b02pQNcpVBYmnOu7-LD5NayEW-0woYsUkaSOFXFwiLO4C5US6Yo7NG_LDRF83KdFXUn-YYvliM9ST5DBqYoHzR3MpAj9rCOZsvjSkbTtf_s3WhYBz2jlKFzstjS8FszDN2sBVQYuZHxONFVlAQ3SX1h9aUUgCZw1Milj7vVhn1R3yDJwXvjkOqNSiS2fIoFQWSCX3-eN8XZaBbBU-3rPShKpv6Kt9D_Br17U7UryW4roqj_dZO; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:39:23 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:39:23 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE6.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D723239513%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 08:09:23 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=slc-b-origin-www-2.paypal.com; expires=Wed, 20-Sep-2017 08:09:23 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893763~id=11bbbcc9d61c5db762e155c0c3883ddb; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[09/20/2017 1:09 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: b6043ef17b10
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: slc-b-origin-www-2.paypal.com
+X-EdgeConnect-MidMile-RTT: 8
+X-EdgeConnect-Origin-MEX-Latency: 453
+Date: Wed, 20 Sep 2017 07:39:23 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=b4CaBDBfRtnRr1lXzeG7W4hCS9sipT5fY7Y9CvGz6dGzSHbzdAEHxFcAQOaD1Jv1Ut1zfr6N3geVLFw92OJj06O5uD9SEfn3oWyInNeBtgHRNCPAVQoPM0fPPEC_VAwbFMtzPCNZG6UyURS23Qw5StqxHCPMHg91ZmL5z30k8AEa1AHT1pjnnPaPad1F0QBtvq9XLcWu9b02pQNcpVBYmnOu7-LD5NayEW-0woYsUkaSOFXFwiLO4C5US6Yo7NG_LDRF83KdFXUn-YYvliM9ST5DBqYoHzR3MpAj9rCOZsvjSkbTtf_s3WhYBz2jlKFzstjS8FszDN2sBVQYuZHxONFVlAQ3SX1h9aUUgCZw1Milj7vVhn1R3yDJwXvjkOqNSiS2fIoFQWSCX3-eN8XZaBbBU-3rPShKpv6Kt9D_Br17U7UryW4roqj_dZO; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:39:23 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:39:23 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE6.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D723239513%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 08:09:23 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=slc-b-origin-www-2.paypal.com; expires=Wed, 20-Sep-2017 08:09:23 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893763~id=11bbbcc9d61c5db762e155c0c3883ddb; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALIDHTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: 5c050134c3865
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: slc-b-origin-www-2.paypal.com
+X-EdgeConnect-MidMile-RTT: 8
+X-EdgeConnect-Origin-MEX-Latency: 433
+Date: Wed, 20 Sep 2017 07:39:24 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=WuBZuU4SdlePh8FbuLO4k4QCeQNzGa0e5zQGCEOjwY4N30ZKLQJ6Zag6q38vpSKnp1737kCBAfVog40RCecb-oifHzSZ7DQN_x3dbODBspF7oGXPVeiCv_tRdgHc9eJcmyx_yCLmwe-6JdioWrlnEEZJi26F0rx3Z10fLAvW9R7PAd_OS7tw6G5T-ALVoztJqIL1bsfcWLCuT70GYt49zLTQMi0sFadrfF0tXK0HRdjyDdjEt9AUMJJqQOK5zTL2e4EuWN288HaTWdQUn1dEJUurej5mp8AZbUzmNFWWX3LBypPKXJz6Ml7wzfv_We8zoyZFQ5GN1B1bUQBkP3_81ztARHrN33uaTlPWWKARoWkfIpCRlOlLdgi_gArkkDNlkU7XPwCqmCCj4z2OTJW1XCXe74ER8a4d1yHloAFDdVhzl1Cn9C25ElXcKBq; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:39:24 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:39:24 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE6.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D723239513%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 08:09:24 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=slc-b-origin-www-2.paypal.com; expires=Wed, 20-Sep-2017 08:09:24 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893764~id=5359d0e62425ce8cdc2e9ad7255a1d94; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[09/20/2017 1:11 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: d06843b6c4
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: slc-b-origin-www-2.paypal.com
+X-EdgeConnect-MidMile-RTT: 15
+X-EdgeConnect-Origin-MEX-Latency: 539
+Date: Wed, 20 Sep 2017 07:41:07 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=Uxlgs5PCS2cYYnG56JqJIsN23w2f8YOaGAzPcb02gMso1ja7kr9azKVavgfPqlA6bSUUXgdpnrthPk1ReFXMIdgNdkdnOtNzdzgN1q352462PaUvUPtxJgzOXzKQqIlTd3C--k1S0MFzcKkutsB4QLi_5DgrkNyTSihZI1PoPVGaMUXpJ9mxb833VVxBiOamoPXR4fQKJQnwNEvi49C8r0QqCcgHJkShcIe5sXBFjmOJfKqDLsAITsAODvnlRroq5TJAjQk6iE7J09E_i3d_-3uDM5CIFg01-LOcAWzizkq1xsfGErARV8Z9Tu8rqTzjqP0FC_mnPnugE7RQKMKRYKbWr0aqwEyHhwePQNCrSxmDI_G6NmmtP8xJq9DE3zBzVa2xY8f27kKbLcnsQ1kTvgQQR6NUso_KSAyo2kJV1QNlbtXiaN2AWwx_FzK; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:41:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:41:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE6.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D2468069977%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 08:11:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=slc-b-origin-www-2.paypal.com; expires=Wed, 20-Sep-2017 08:11:07 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893867~id=aa5483b845c057226c254f9cdf5c4126; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[09/20/2017 1:11 PM] - FAIL: IPN Validation Failed!
+[From:223.255.247.114|223.255.247.114]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg12.slc
+Paypal-Debug-Id: d06843b6c4
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: slc-b-origin-www-2.paypal.com
+X-EdgeConnect-MidMile-RTT: 15
+X-EdgeConnect-Origin-MEX-Latency: 539
+Date: Wed, 20 Sep 2017 07:41:07 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=Uxlgs5PCS2cYYnG56JqJIsN23w2f8YOaGAzPcb02gMso1ja7kr9azKVavgfPqlA6bSUUXgdpnrthPk1ReFXMIdgNdkdnOtNzdzgN1q352462PaUvUPtxJgzOXzKQqIlTd3C--k1S0MFzcKkutsB4QLi_5DgrkNyTSihZI1PoPVGaMUXpJ9mxb833VVxBiOamoPXR4fQKJQnwNEvi49C8r0QqCcgHJkShcIe5sXBFjmOJfKqDLsAITsAODvnlRroq5TJAjQk6iE7J09E_i3d_-3uDM5CIFg01-LOcAWzizkq1xsfGErARV8Z9Tu8rqTzjqP0FC_mnPnugE7RQKMKRYKbWr0aqwEyHhwePQNCrSxmDI_G6NmmtP8xJq9DE3zBzVa2xY8f27kKbLcnsQ1kTvgQQR6NUso_KSAyo2kJV1QNlbtXiaN2AWwx_FzK; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:41:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:41:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE6.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D2468069977%26HTTP_X_PP_AZ_LOCATOR%3Ddcg12.slc; Expires=Wed, 20 Sep 2017 08:11:07 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=slc-b-origin-www-2.paypal.com; expires=Wed, 20-Sep-2017 08:11:07 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893867~id=aa5483b845c057226c254f9cdf5c4126; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALIDHTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg11.slc
+Paypal-Debug-Id: 648b074bb181a
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: slc-b-origin-www-1.paypal.com
+X-EdgeConnect-MidMile-RTT: 8
+X-EdgeConnect-Origin-MEX-Latency: 599
+Date: Wed, 20 Sep 2017 07:41:08 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=-7LjQ46dCwRTz-ivkWoUWkBpzhYbEU-vmH_ZeHScaKCWD3-UT6VaKocSi7O9ylAr4Rt1zwJdIVx8IJuMkd7N_85EumAO88eqSQuXoCwVzNofHTA48uTqX48p_Xg-edCl-eHnRwymMkFaLgYo9BMtRpcjLv-IeRvRbMZOD6huY15mpl0RVvSPJ_bZH75iLhqxoCKnDlm0laTb-L6nnf4jtq7uL7TP9W45cUcJF4d4lh_st8RtPFxwKFKRl9BUeJFY0B2b71dIoCsOgUuQPyMdMDM8BKGoS2T7TrjeG2aWgTcEHymjEVEq4s8jvcAKRWW5nj8-BnZ0_Q8ngVcVz26A7ewa5HJqK23zoje8W04mEZVa4iHYOeGTPVIqxqvw5AU681boEAttf2RlgxZcpQJwfxY--O0_TDxrZ9cPAljTyKeZUwVfKs-4epwMc64; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Sat, 18-Sep-2027 07:41:08 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Fri, 20-Sep-2019 07:41:08 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE6.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D2468069977%26HTTP_X_PP_AZ_LOCATOR%3Ddcg11.slc; Expires=Wed, 20 Sep 2017 08:11:08 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=slc-b-origin-www-1.paypal.com; expires=Wed, 20-Sep-2017 08:11:08 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1505893868~id=385ef9836cc1174b6df978cc5042c4e3; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[10/24/2017 11:31 AM] - FAIL: IPN Validation Failed!
+[From:ip6-localhost|::1]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg11.slc
+Paypal-Debug-Id: 7e15768aa3213
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: slc-b-origin-www-2.paypal.com
+X-EdgeConnect-MidMile-RTT: 2
+X-EdgeConnect-Origin-MEX-Latency: 706
+Date: Tue, 24 Oct 2017 06:01:18 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=r9aS0m1BDBuuI8unH0YmhRXTCmciUW_qtmWoH2n_ORYBs4CX0PcdnlsqxAeP9Y3L9mmIj7XgZ9bJ2-KuLMjUjREMdO1vLRpd5ET3wQMKHeCFYKjAX7R6YTuI8ltKJRx09v_PyfOV6PNNDBq0gtedKaTsqq94bbIdADVyJqQg5hMbrmazYhaFzGl82ty8XWORJ9ggR3L9GXL-gOSWhemxufhJwEqi5clO5g6QpbUb-VgBMpvPOTmDo9Vn9VdHp2WVwpoQY-Y4JnOwh8yLO6xF5z8Trtpuv78Dx9gB3BxFskLN9UKtGGuhNvjMPEbA7m0Bjj8l0dl-v5o5BHdMxJGrDeI7S_CWGqzHZ_-N7eyqzUcy2ziXNHFFOUJN93h49Cd6tSXesNj6RncWLr5ooleR_TN7r28EbhAzVZ7b7fb5ENqh3uWU3caeK5O2V7q; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Fri, 22-Oct-2027 06:01:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Thu, 24-Oct-2019 06:01:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE6.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D769125977%26HTTP_X_PP_AZ_LOCATOR%3Ddcg11.slc; Expires=Tue, 24 Oct 2017 06:31:18 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=slc-b-origin-www-2.paypal.com; expires=Tue, 24-Oct-2017 06:31:18 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1508825478~id=8ae49a6283cf107a12c2fde949aaf1d3; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[10/24/2017 11:32 AM] - FAIL: IPN Validation Failed!
+[From:ip6-localhost|::1]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Server: Apache
+X-Frame-Options: SAMEORIGIN
+HTTP_X_PP_AZ_LOCATOR: dcg11.slc
+Paypal-Debug-Id: 33756f67d576b
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: text/html; charset=UTF-8
+DC: slc-b-origin-www-1.paypal.com
+X-EdgeConnect-MidMile-RTT: 1
+X-EdgeConnect-Origin-MEX-Latency: 719
+Date: Tue, 24 Oct 2017 06:02:14 GMT
+Content-Length: 7
+Connection: close
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=4Ip2HBohSxap2Dox2finVKFBgnc_h87yJhA2nOC-dBamn8AQ1NIPKntaugs97zZPxcLKwawQTXBxkwRW5bXWb0CNRb-dxStA9HFTYgu54NMHuhgCwZood_MPi-lcNbmX2R3zZ1JIMPQcvygBOHWQHSCER3cuWHxY70jvaJoKuzWx4cFEszDR5dxMJt3ATx6JHyE-Cc3i7HOQB2lcp7syZbwHPVgICJTaYn9ahJ-vG8CsbRfeYN2sL71fNITJOjCZnfzOL43XR4e0pfHzGJi9TCm7xPQtvju_RrtwRfIy2lToFrHSBTXa_skpjPKPTeMeQ7ISImACsoDW4UcUPgSRlyhrFmj90l59QCXdAh1xIxaBQ0J2DMAFp5TgX9x9NffTjihjVd7vVTMgAtAXByQW2lhvuverm0KMv8n1VYXX9QFvPA5B4ALWgPDYxNe; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Fri, 22-Oct-2027 06:02:14 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Thu, 24-Oct-2019 06:02:14 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=name%3DLIVE6.WEB.1%26silo_version%3D880%26app%3Dappdispatcher%26TIME%3D1708650073%26HTTP_X_PP_AZ_LOCATOR%3Ddcg11.slc; Expires=Tue, 24 Oct 2017 06:32:14 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: X-PP-SILOVER=; Expires=Thu, 01 Jan 1970 00:00:01 GMT
+Set-Cookie: AKDC=slc-b-origin-www-1.paypal.com; expires=Tue, 24-Oct-2017 06:32:14 GMT; path=/; secure
+Set-Cookie: akavpau_ppsd=1508825534~id=e37a31a15c9b746df16831d6d355b183; Path=/
+Strict-Transport-Security: max-age=63072000
+
+INVALID
+
+[04/03/2021 5:39 PM] - FAIL: IPN Validation Failed!
+[From:49.34.121.43|49.34.121.43]IPN POST Vars Received By Paypal_IPN Response API:
+payer_email=test2@ncrypted.com 
+payer_id=8JBFD9MP68B7E 
+payer_status=VERIFIED 
+first_name=Testtwo 
+last_name=NCrypted 
+address_name=Testtwo NCrypted 
+address_street=1 Main St 
+address_city=San Jose 
+address_state=CA 
+address_country_code=US 
+address_zip=95131 
+residence_country=US 
+txn_id=52K49355L35454129 
+mc_currency=USD 
+mc_fee=0.45 
+mc_gross=5.00 
+protection_eligibility=ELIGIBLE 
+payment_fee=0.45 
+payment_gross=5.00 
+payment_status=Completed 
+payment_type=instant 
+handling_amount=0.00 
+shipping=0.00 
+item_name1=5 Adhoc Inmail for 1 Month(s) 
+item_number1=4 
+quantity1=5 
+mc_gross_1=5.00 
+tax1=0.00 
+num_cart_items=1 
+txn_type=cart 
+payment_date=2021-04-03T12:00:13Z 
+business=test@ncrypted.com 
+receiver_id=HXTB2B748N3NW 
+notify_version=UNVERSIONED 
+invoice=324814 
+verify_sign=A-IeOJqDqsqzuhUPuWxrmerhS4XjAB.1OYQOa-E9hQ0Gduxe34Tj988t 
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 7
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Content-Type: text/html; charset=UTF-8
+Paypal-Debug-Id: 17588daf9d0a8
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=GXc9H9uPkVe3ZPuJlkrzdGRfZGa39lZyrZu5Jw3JPgP1udSFLftkoehc04VCZKq9ChFYfzUZyN4xnjIJ7G2WkVoJ-zU7hX28ijQOZdmxVU2YU82hrQhc8dzjx8CGNkNKqWDwhs0uVg2M3vusmOQlK7c3JFwyLcISos6xlpyNYn2od-0bN4xcNGVXA-rqsydOXZ2K2sVU7jTdR2GuBWH8iv99jXyzNH1Oqi3tPpZIxcHsGAkNwkmg5kubrVAe_-z-gU3kmqVEhjFdPvRl8S9fNxN-XgvfNNnALVkFa-nCwhFDkNXaYSbWiIqhd4pBgdM6IXXqDwmboJDryosTA4fctzbZz5ViK1E5AHDWfNpC1EJM4bI2mx6ubn6VYIFU01M7yJJ92zHsXLuEAleUDS2NNyA388SfTX73xKvNn1aikoCTZDlAfcL65c7tTsO; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Tue, 01-Apr-2031 12:09:31 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Mon, 03-Apr-2023 12:09:31 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: l7_az=dcg02.phx; Path=/; Domain=paypal.com; Expires=Sat, 03 Apr 2021 12:39:31 GMT; HttpOnly; Secure
+Set-Cookie: ts=vreXpYrS%3D1712146170%26vteXpYrS%3D1617453570%26vr%3D97a364291780a788722af9e2fe1f2ba5%26vt%3D97a364291780a788722af9e2fe1f2ba4%26vtyp%3Dnew; Path=/; Domain=paypal.com; Expires=Tue, 02 Apr 2024 12:09:31 GMT; HttpOnly; Secure
+Set-Cookie: ts_c=vr%3D97a364291780a788722af9e2fe1f2ba5%26vt%3D97a364291780a788722af9e2fe1f2ba4; Path=/; Domain=paypal.com; Expires=Tue, 02 Apr 2024 12:09:31 GMT; Secure
+X-Frame-Options: SAMEORIGIN
+DC: ccg11-origin-www-1.paypal.com
+Accept-Ranges: bytes
+Via: 1.1 varnish, 1.1 varnish
+Date: Sat, 03 Apr 2021 12:09:31 GMT
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Served-By: cache-dfw18677-DFW, cache-den8263-DEN
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
+X-Timer: S1617451771.862973,VS0,VE1112
+Vary: Accept-Encoding
+Set-Cookie: x-cdn=fastly:DEN; Domain=paypal.com; Path=/; Secure
+
+INVALID
+
+[04/03/2021 5:45 PM] - FAIL: IPN Validation Failed!
+[From:49.34.121.43|49.34.121.43]IPN POST Vars Received By Paypal_IPN Response API:
+IPN Response from Paypal Server:
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 7
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Content-Type: text/html; charset=UTF-8
+Paypal-Debug-Id: cef5deaea00fc
+Set-Cookie: cwrClyrK4LoCV1fydGbAxiNL6iG=2NuzV7IaX83GMIAI0BLB6etUlj2ptOLWQjjHJ09vKdM0F9eY3WcPImSbPi2Eqicik-cDGlnzVfhe8nYfsviieZ1WIUCQcjbFjLoEzd2rQaOqR3kZBx6BRAyqGpx8BcuCkhOI3uBL6nwZiDD6H20hCIBqzRosEn61VP6XiNYxpnrdqywAvhFuMFbyjTlYrkGrwP0ROZIIds2Sk3axymyu5F_S244lOrWmwZrZ8cgl6Dwx2jL4f3pHA7XgIAtX14aTWGuR0kSFc8ek0sut8f31cxjl7QQzu7dAtU6Oa4EGWi4RQCcSqyutaqDuwRiGFOd0BukzaZtBGeJ4z0qxqo4ugVM9i6VlL_pIujJim9Rc8DqX7QaACdkDiv1PhW2XnUlohX_EW88JcJmEYCoEE1wMPRtKyzKxyNFLIamG-yKGK7CD6iFfCPhjPnLSQ0a; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: cookie_check=yes; expires=Tue, 01-Apr-2031 12:15:14 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navcmd=_notify-validate; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: navlns=0.0; expires=Mon, 03-Apr-2023 12:15:14 GMT; domain=.paypal.com; path=/; Secure; HttpOnly
+Set-Cookie: l7_az=dcg02.phx; Path=/; Domain=paypal.com; Expires=Sat, 03 Apr 2021 12:45:14 GMT; HttpOnly; Secure
+Set-Cookie: ts=vreXpYrS%3D1712146513%26vteXpYrS%3D1617453913%26vr%3D97a89f7f1780a30440d97033ff5978be%26vt%3D97a89f7f1780a30440d97033ff5978bd%26vtyp%3Dnew; Path=/; Domain=paypal.com; Expires=Tue, 02 Apr 2024 12:15:14 GMT; HttpOnly; Secure
+Set-Cookie: ts_c=vr%3D97a89f7f1780a30440d97033ff5978be%26vt%3D97a89f7f1780a30440d97033ff5978bd; Path=/; Domain=paypal.com; Expires=Tue, 02 Apr 2024 12:15:14 GMT; Secure
+X-Frame-Options: SAMEORIGIN
+DC: phx-origin-www-3.paypal.com
+Accept-Ranges: bytes
+Via: 1.1 varnish, 1.1 varnish
+Date: Sat, 03 Apr 2021 12:15:14 GMT
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Served-By: cache-dfw18660-DFW, cache-den8246-DEN
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
+X-Timer: S1617452114.713248,VS0,VE1250
+Vary: Accept-Encoding
+Set-Cookie: x-cdn=fastly:DEN; Domain=paypal.com; Path=/; Secure
+
+INVALID
+

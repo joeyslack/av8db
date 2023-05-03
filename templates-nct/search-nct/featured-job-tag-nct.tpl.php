@@ -1,0 +1,1 @@
+<span class="featured-job-tag featured-label">{LBL_FEATURED}</span>

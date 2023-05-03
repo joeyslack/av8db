@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" title="{LBL_ADD_SKILLS}" id="add_skills"><i class="icon-plus"></i></a>

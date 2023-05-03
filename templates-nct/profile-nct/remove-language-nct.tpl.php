@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" class="icon-close remove_language" data-language-id="%ENC_LANGUAGE_ID%"></a>

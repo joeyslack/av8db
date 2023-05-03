@@ -1,0 +1,1 @@
+<div class="load-more-comments"><a href="<?php echo $this->load_more_link; ?>" title="{LBL_LOAD_MORE_COMMENTS}" class="load-more-comments-link">{LBL_LOAD_MORE_COMMENTS}</a></div>

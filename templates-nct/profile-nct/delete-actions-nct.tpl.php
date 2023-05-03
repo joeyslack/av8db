@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" class="%CLASS%" title="%TITLE%"><i class="icon-close"></i></a>

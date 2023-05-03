@@ -1,0 +1,1 @@
+<ul class="tag"><?php echo $this->skills; ?></ul>

@@ -1,0 +1,1 @@
+<span class="featured-btn-dashboard featured-label">{LBL_FEATURED}</span>

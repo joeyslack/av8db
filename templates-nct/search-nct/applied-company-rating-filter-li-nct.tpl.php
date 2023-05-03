@@ -1,0 +1,1 @@
+<li>%FILTER_NAME% <a href="javascript:void(0);" class="icon-close red-text remove-company-rating-filter" data-id="%DATA_ID%"></a></li>

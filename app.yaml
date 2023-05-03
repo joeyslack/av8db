@@ -1,0 +1,41 @@
+runtime: php72
+
+automatic_scaling:
+  min_idle_instances: 2
+
+instance_class: F4
+
+runtime_config:
+  document_root: .
+
+handlers:
+
+# Serve images as static resources.
+- url: /(.+\.(html?|txt|css|js|ico|jpe?g|png|webp|gif|JPE?G|PNG|GIF|swf|woff|woff2|ttf|svt|eot))$
+  static_files: \1
+  upload: .+\.(html?|txt|css|js|ico|jpe?g|png|webp|gif|JPE?G|PNG|GIF|swf|woff|woff2|ttf|svt|eot)$
+
+# Serve your app through a front controller at index.php or public/index.php.
+- url: .*
+  script: auto
+  secure: always
+
+- url: /images
+  static_dir: static/images
+  http_headers:
+    Access-Control-Allow-Origin: '*'
+  # ...
+
+entrypoint:
+  serve handler.php
+
+
+env_variables:
+  #replce User, password, database, and connection name with the
+  # value  obtained with configuration your Cloud SQL instance.
+  CLOUDSQL_USER: root
+  CLOUDSQL_DB: av8prod_db
+  CLOUDSQL_PASSWORD: cHt7E0IHP46GJqKI
+  CLOUDSQL_DSN: 'mysql:unix_socket=/cloudsql/av8db-306220:us-central1:av8db-prod;dbname=av8prod_db'
+  #END gae_cloudsql_mysql_env
+  #/cloudsql/av8db-306220:us-central1:av8db-test

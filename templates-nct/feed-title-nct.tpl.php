@@ -1,0 +1,1 @@
+<h5 class="blue-color"><strong>%FEED_TITLE%</strong></h5>

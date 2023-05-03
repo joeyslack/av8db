@@ -1,0 +1,1 @@
+<li id="reset_all_filters_li" class="reset"> <a href="javascript:void(0);" id="reset_all_filters" class="blue-btn" title="{LBL_RESET}">{LBL_RESET}</a></li>

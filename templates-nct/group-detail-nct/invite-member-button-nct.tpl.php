@@ -1,0 +1,1 @@
+<div class="renew-bx text-center"><a href="javascript:void(0);" id="invite_member_link" class="blue-btn">{LBL_GRP_DTL_INVITE}</a></div>

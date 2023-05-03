@@ -1,0 +1,1 @@
+<a href="%VIEW_ALL_NOTIFICATION_URL%" target="_blank" title="{LBL_VIEW_ALL}" class="view-all-notifications">{LBL_VIEW_ALL}</a>

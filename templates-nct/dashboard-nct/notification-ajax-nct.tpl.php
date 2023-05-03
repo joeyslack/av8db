@@ -1,0 +1,1 @@
+<ul class=" clearfix"><?php echo $this->notification; ?></ul><!-- <div id="pagination_container"><?php //echo $this->pagination; ?></div> -->

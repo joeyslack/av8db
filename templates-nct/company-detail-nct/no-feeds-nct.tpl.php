@@ -1,0 +1,1 @@
+<div class="no-feeds">{ERROR_COM_DET_NO_FEED_FOUND}</div>

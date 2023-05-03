@@ -1,0 +1,1 @@
+<li data-language-id="%LANGUAGE_ID_ENCRYPTED%">%LANGUAGE% <?php echo $this->language_actions; ?></li>

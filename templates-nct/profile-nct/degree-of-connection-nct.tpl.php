@@ -1,0 +1,1 @@
+<span class="msg-circle"><?php echo $this->degree_of_connection; ?></span>

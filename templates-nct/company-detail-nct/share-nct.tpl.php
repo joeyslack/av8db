@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" id="share_news_feed" data-value='%ENC_COMPANY_ID%' class="blue-color underline">{LBL_COM_DET_SHARE}</a>

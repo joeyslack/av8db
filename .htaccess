@@ -1,0 +1,1234 @@
+<IfModule mod_deflate.c>
+#The following line is enough for .js and .css
+AddOutputFilter DEFLATE js css
+AddOutputFilterByType DEFLATE text/plain text/xml application/xhtml+xml text/css application/xml application/rss+xml application/atom_xml application/x-javascript application/x-httpd-php application/x-httpd-fastphp text/html
+
+#The following lines are to avoid bugs with some browsers
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+Options -Indexes
+IndexIgnore *
+
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine On
+
+#for live site
+RewriteBase /
+
+#for local site
+#RewriteBase /connectin_web/
+
+# RewriteCond %{HTTPS} !on
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+RewriteCond %{HTTPS} !off
+RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI}
+
+### INSTALL ###
+#RewriteRule ^(install)/?$ install-nct/install.php [L]
+#RewriteRule ^(installdb)/?$ install-nct/install_db.php [L]
+#RewriteRule ^(verify)/?$ install-nct/verifyconfig.php [L]
+
+
+#for live site
+#ErrorDocument 404 /connectin-new/404.php
+
+#for local site
+ErrorDocument 404 /connectin/404.php
+
+AddDefaultCharset UTF-8
+
+<FilesMatch "\.(html?|txt|css|js|php|ico|jpe?g|png|gif|JPE?G|PNG|GIF|swf|woff|ttf|svt|eot)$">
+    SetOutputFilter DEFLATE
+</FilesMatch>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 year"
+ExpiresByType image/jpeg "access 1 year"
+ExpiresByType image/gif "access 1 year"
+ExpiresByType image/png "access 1 year"
+ExpiresByType text/css "access 1 month"
+ExpiresByType text/html "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+<IfModule mod_headers.c>
+  <filesMatch "\.(css|ico|jpg|jpeg|png|gif|swf|woff|ttf|svt|eot)$">
+    Header set Cache-Control "public, no-transform"
+  </filesMatch>
+  <filesMatch "\.(js)$">
+    Header set Cache-Control "private"
+  </filesMatch>
+  <filesMatch "\.(x?html?|php|html?)$">
+    Header set Cache-Control "max-age=7200, private, must-revalidate"
+  </filesMatch>
+</IfModule>
+
+<ifModule mod_gzip.c>
+    mod_gzip_on Yes
+    mod_gzip_dechunk Yes
+    mod_gzip_item_include file \.(html?|txt|css|js|php|pl|jpg|gif|png|JPG|JPEG|GIF|PNG|jpeg|woff|ttf|svt)$
+    mod_gzip_item_include handler ^cgi-script$
+    mod_gzip_item_include mime ^text/.*
+    mod_gzip_item_include mime ^application/x-javascript.*
+    mod_gzip_item_exclude mime ^image/.*
+    mod_gzip_item_exclude application/x-font-ttf
+    mod_gzip_item_exclude application/x-font-woff
+    mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+
+FileETag None
+Header set X-UA-Compatible "IE=edge,chrome=1"
+
+#RewriteRule ^admin-nct/user-dashboard/([0-9]+)$ admin-nct/modules-nct/user-dashboard-nct/index.php?id=$1 [NC,L]
+#RewriteRule ^admin-nct/user-dashboard/([0-9]+)/$ admin-nct/modules-nct/user-dashboard-nct/index.php?id=$1 [NC,L]
+
+RewriteRule ^get_connections_ajax$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+RewriteRule ^get_connections_ajax/$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+
+RewriteRule ^get_my_pages_ajax$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+RewriteRule ^get_my_pages_ajax/$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+
+RewriteRule ^get_following_ajax$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+RewriteRule ^get_following_ajax/$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+
+RewriteRule ^get_my_jobs_ajax$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+RewriteRule ^get_my_jobs_ajax/$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+
+RewriteRule ^get_saved_jobs_ajax$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+RewriteRule ^get_saved_jobs_ajax/$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+
+RewriteRule ^get_applied_jobs_ajax$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+RewriteRule ^get_applied_jobs_ajax/$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+
+RewriteRule ^get_my_groups_ajax$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+RewriteRule ^get_my_groups_ajax/$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+
+RewriteRule ^get_joined_groups_ajax$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+RewriteRule ^get_joined_groups_ajax/$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php [QSA,L]
+
+
+RewriteRule ^generate-captcha$ includes-nct/captcha-nct/generate_captcha.php [NC,L]
+RewriteRule ^generate-captcha/$ includes-nct/captcha-nct/generate_captcha.php [NC,L]
+
+
+RewriteRule ^admin-nct/user-dashboard/([0-9]+)/action/(.*)$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php?id=$1&action=$2 [NC,L]
+RewriteRule ^admin-nct/user-dashboard/([0-9]+)/action/(.*)/$ admin-nct/modules-nct/user-dashboard-nct/ajax.user-dashboard-nct.php?id=$1&action=$2 [NC,L]
+
+RewriteRule ^admin-nct/user-dashboard/([0-9]+)/(.*)$ admin-nct/modules-nct/user-dashboard-nct/index.php?id=$1&action=$2 [NC,L]
+RewriteRule ^admin-nct/user-dashboard/([0-9]+)/(.*)/$ admin-nct/modules-nct/user-dashboard-nct/index.php?id=$1&action=$2 [NC,L]
+
+
+##delete comment##
+RewriteRule ^del_comment$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^del_comment/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+##edit comment##
+RewriteRule ^edit_comment$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^edit_comment/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+
+
+RewriteRule ^$ modules-nct/home-nct/index.php [NC,L]
+RewriteRule ^/$ modules-nct/home-nct/index.php [NC,L]
+
+RewriteRule ^validate_captcha$ modules-nct/home-nct/ajax.home-nct.php?action=validate_captcha [NC,L]
+RewriteRule ^validate_captcha/$ modules-nct/home-nct/ajax.home-nct.php?action=validate_captcha [NC,L]
+
+RewriteRule ^checkIfEmailExists$ modules-nct/home-nct/ajax.home-nct.php?action=checkIfEmailExists [NC,L]
+RewriteRule ^checkIfEmailExists/$ modules-nct/home-nct/ajax.home-nct.php?action=checkIfEmailExists [NC,L]
+
+
+RewriteRule ^submit-feedback$ modules-nct/home-nct/ajax.home-nct.php [NC,L]
+RewriteRule ^submit-feedback/$ modules-nct/home-nct/ajax.home-nct.php [NC,L]
+
+RewriteRule ^submit-contactus$ modules-nct/home-nct/ajax.home-nct.php [NC,L]
+RewriteRule ^submit-contactus/$ modules-nct/home-nct/ajax.home-nct.php [NC,L]
+
+
+RewriteRule ^home$ modules-nct/home-nct/index.php [QSA,L]
+RewriteRule ^home/$ modules-nct/home-nct/index.php [QSA,L]
+
+RewriteRule ^login$ modules-nct/home-nct/index.php [QSA,L]
+RewriteRule ^login/$ modules-nct/home-nct/index.php [QSA,L]
+
+RewriteRule ^signup/$ modules-nct/home-nct/index.php [QSA,L]
+RewriteRule ^signup$ modules-nct/home-nct/index.php [QSA,L]
+
+RewriteRule ^social-signup-(facebook|gplus)/?$ modules-nct/home-nct/ajax.home-nct.php [QSA,L]
+
+RewriteRule ^signin/google$ modules-nct/social-login-nct/social-login-nct.php?social_media=Google [QSA,L]
+RewriteRule ^signin/google/$ modules-nct/social-login-nct/social-login-nct.php?social_media=Google [QSA,L]
+
+RewriteRule ^process-google-login$ modules-nct/social-login-nct/process-google-login-nct.php [QSA,L]
+RewriteRule ^process-google-login/$ modules-nct/social-login-nct/process-google-login-nct.php [QSA,L]
+
+RewriteRule ^signin/linkedin$ includes-nct/login-with-linkedin/login.php [QSA,L]
+RewriteRule ^signin/linkedin/$ includes-nct/login-with-linkedin/login.php [QSA,L]
+
+RewriteRule ^signin/email/(.*)/activation_key/(.*)$ modules-nct/home-nct/verify_email_address.php?email_address=$1&activation_key=$2 [QSA,L]
+RewriteRule ^signin/email/(.*)/activation_key/(.*)/$ modules-nct/home-nct/verify_email_address.php?email_address=$1&activation_key=$2 [QSA,L]
+
+RewriteRule ^resend_verification_email$ modules-nct/home-nct/resend-verification-email-nct.php [QSA,L]
+RewriteRule ^resend_verification_email/$ modules-nct/home-nct/resend-verification-email-nct.php [QSA,L]
+
+
+RewriteRule ^forgot_password$ modules-nct/home-nct/index.php [QSA,L]
+RewriteRule ^forgot_password/$ modules-nct/home-nct/index.php [QSA,L]
+
+RewriteRule ^resetpassword$ modules-nct/reset-password-nct/index.php [QSA,L]
+RewriteRule ^resetpassword/$ modules-nct/reset-password-nct/index.php [QSA,L]
+
+RewriteRule ^resetpassword/([a-zA-Z0-9_-]+)$ modules-nct/reset-password-nct/index.php?code=$1 [QSA,L]
+RewriteRule ^resetpassword/([a-zA-Z0-9_-]+)/$ modules-nct/reset-password-nct/index.php?code=$1 [QSA,L]
+
+RewriteRule ^logout$ modules-nct/home-nct/logout-nct.php [QSA,L]
+RewriteRule ^logout/$ modules-nct/home-nct/logout-nct.php [QSA,L]
+
+RewriteRule ^content/([a-zA-Z0-9_-]+)$ modules-nct/content-nct/index.php?page_slug=$1 [QSA,L]
+RewriteRule ^content/([a-zA-Z0-9_-]+)/$ modules-nct/content-nct/index.php?page_slug=$1 [QSA,L]
+
+RewriteRule ^contact_us$ modules-nct/contact_us-nct/index.php [QSA,L]
+RewriteRule ^contact_us/$ modules-nct/contact_us-nct/index.php [QSA,L]
+
+
+RewriteRule ^contact-us$ modules-nct/contact-us-nct/index.php [QSA,L]
+RewriteRule ^contact-us/$ modules-nct/contact-us-nct/index.php [QSA,L]
+
+RewriteRule ^profile$ modules-nct/profile-nct/index.php [QSA,L]
+RewriteRule ^profile/$ modules-nct/profile-nct/index.php [QSA,L]
+
+RewriteRule ^referral$ modules-nct/referrals-nct/index.php [QSA,L]
+RewriteRule ^referral/$ modules-nct/referrals-nct/index.php [QSA,L]
+
+RewriteRule ^update-profile-picture$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^update-profile-picture/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^removeConnection$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^removeConnection/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^removeFollowing$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^removeFollowing/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+
+RewriteRule ^follow_user$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^follow_user/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+
+RewriteRule ^removeLanguage$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^removeLanguage/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^removeSkill$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^removeSkill/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^deleteExperience$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^deleteExperience/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^deleteEducation$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^deleteEducation/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^removeProfileImage$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^removeProfileImage/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^profile/(.*)$ modules-nct/profile-nct/index.php?user_id=$1 [QSA,L]
+RewriteRule ^profile/(.*)/$ modules-nct/profile-nct/index.php?user_id=$1 [QSA,L]
+
+RewriteRule ^membership-plans$ modules-nct/membership-plans-nct/index.php [QSA,L]
+RewriteRule ^membership-plans/$ modules-nct/membership-plans-nct/index.php [QSA,L]
+
+RewriteRule ^subscribe-plan/(.*)$ modules-nct/membership-plans-nct/subscribe-plan-nct.php?plan_id=$1 [QSA,L]
+RewriteRule ^subscribe-plan/(.*)/$ modules-nct/membership-plans-nct/subscribe-plan-nct.php?plan_id=$1 [QSA,L]
+
+RewriteRule ^pay-for-fj/plan/(.*)/job/(.*)$ modules-nct/membership-plans-nct/pay-for-fj-nct.php?plan_id=$1&job_id=$2 [QSA,L]
+RewriteRule ^pay-for-fj/plan/(.*)/job/(.*)/$ modules-nct/membership-plans-nct/pay-for-fj-nct.php?plan_id=$1&job_id=$2 [QSA,L]
+
+RewriteRule ^purchase-adhoc-inmails$ modules-nct/membership-plans-nct/purchase-adhoc-inmails-nct.php [QSA,L]
+RewriteRule ^purchase-adhoc-inmails/$ modules-nct/membership-plans-nct/purchase-adhoc-inmails-nct.php [QSA,L]
+
+RewriteRule ^payment-summary/(.*)$ modules-nct/payment-summary-nct/index.php?ph_id=$1 [QSA,L]
+RewriteRule ^payment-summary/(.*)/$ modules-nct/payment-summary-nct/index.php?ph_id=$1 [QSA,L]
+
+RewriteRule ^payment-summary/([a-zA-Z0-9=_-]+)$ modules-nct/payment-summary-nct/index.php?ph_id=$1 [QSA,L]
+RewriteRule ^payment-summary/([a-zA-Z0-9=_-]+)$/$ modules-nct/payment-summary-nct/index.php?ph_id=$1 [QSA,L]
+
+### Start Checkout URLs ###
+RewriteRule ^checkout/txn_id/(.*)$ modules-nct/checkout-nct/index.php?ph_id=$1 [QSA,L]
+RewriteRule ^checkout/txn_id/(.*)/$ modules-nct/checkout-nct/index.php?ph_id=$1 [QSA,L]
+
+RewriteRule ^payment_successful$ modules-nct/checkout-nct/ipn-notification-listener-nct.php [QSA,L]
+RewriteRule ^payment_successful/$ modules-nct/checkout-nct/ipn-notification-listener-nct.php [QSA,L]
+
+RewriteRule ^transaction_cancelled$ modules-nct/checkout-nct/ipn-notification-listener-nct.php [QSA,L]
+RewriteRule ^transaction_cancelled/$ modules-nct/checkout-nct/ipn-notification-listener-nct.php [QSA,L]
+
+RewriteRule ^notify$ modules-nct/checkout-nct/ipn-notification-listener-nct.php [QSA,L]
+RewriteRule ^notify/$ modules-nct/checkout-nct/ipn-notification-listener-nct.php [QSA,L]
+### End Checkout URLs ###
+
+## Start admin notification ##
+RewriteRule ^get_admin_notifications$ admin-nct/modules-nct/notifications-nct/ajax.notifications-nct.php?action=get_notifications [QSA,L]
+RewriteRule ^get_admin_notifications/$ admin-nct/modules-nct/notifications-nct/ajax.notifications-nct.php?action=get_notifications [QSA,L]
+
+
+RewriteRule ^getCompany$ modules-nct/home-nct/ajax.home-nct.php [QSA,L]
+RewriteRule ^getCompany/$ modules-nct/home-nct/ajax.home-nct.php [QSA,L]
+
+RewriteRule ^getJobLocations$ modules-nct/home-nct/ajax.home-nct.php [QSA,L]
+RewriteRule ^getJobLocations/$ modules-nct/home-nct/ajax.home-nct.php [QSA,L]
+
+RewriteRule ^getExperienceForm$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getExperienceForm/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^add-edit-experience$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^add-edit-experience/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^edit_user_detail$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^edit_user_detail/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getCompanySuggestions$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getCompanySuggestions/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getCompanyLocations$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getCompanyLocations/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+
+RewriteRule ^getEducationForm$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getEducationForm/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getUserDetailForm$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getUserDetailForm/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^add-edit-education$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^add-edit-education/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^add-edit-skill$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^add-edit-skill/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^add-edit-language$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^add-edit-language/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getSkillForm$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getSkillForm/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getLanguageForm$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getLanguageForm/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getSkills$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getSkills/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getLanguages$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getLanguages/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getEducation$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getEducation/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getLicensesEndorsementForm$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getLicensesEndorsementForm/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^add-edit-licenses$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^add-edit-licenses/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getLicenseSuggestions$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getLicenseSuggestions/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^deleteLicense$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^deleteLicense/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getAirportForm$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getAirportForm/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^add-edit-airport$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^add-edit-airport/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getAirports$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getAirports/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getAirports1$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getAirports1/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^requestForAirportAddition$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^requestForAirportAddition/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getAirportSuggestions$ modules-nct/companies-nct/ajax.companies-nct.php [QSA,L]
+RewriteRule ^getAirportSuggestions/$ modules-nct/companies-nct/ajax.companies-nct.php [QSA,L]
+RewriteRule ^getUserAddedReviews$ modules-nct/company-detail-nct/ajax.company-detail-nct.php [QSA,L]
+RewriteRule ^getUserAddedReviews/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php [QSA,L]
+
+RewriteRule ^getFerryPilotReviews$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getFerryPilotReviews/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+#RewriteRule ^searchForReferrals$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+#RewriteRule ^searchForReferrals/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^searchForReferrals$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+RewriteRule ^searchForReferrals/$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+RewriteRule ^getHomeAirportForm$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getHomeAirportForm/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^deleteAirport$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^deleteAirport/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^searchInviteUser$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^searchInviteUser/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^sendReferralsRequest$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+RewriteRule ^sendReferralsRequest/$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+
+RewriteRule ^getReferralReviewModal$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+RewriteRule ^getReferralReviewModal/$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+
+RewriteRule ^rejectReferralRequest$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+RewriteRule ^rejectReferralRequest/$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+
+RewriteRule ^approvepublishreferral$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+RewriteRule ^approvepublishreferral/$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+
+RewriteRule ^resendReferralsRequest$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+RewriteRule ^resendReferralsRequest/$ modules-nct/referrals-nct/ajax.referrals-nct.php [QSA,L]
+
+RewriteRule ^signup/user/(.*)/profile/(.*)$ modules-nct/home-nct/index.php?another_user=$1&profile=$2 [QSA,L]
+
+RewriteRule ^verifyLicense$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^verifyLicense/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getInstituteSuggestion$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getInstituteSuggestion/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getLicenseList$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^getLicenseList/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^reportCompanyReviews$ modules-nct/company-detail-nct/ajax.company-detail-nct.php [QSA,L]
+RewriteRule ^reportCompanyReviews/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php [QSA,L]
+
+RewriteRule ^reportFerryPilotReviews$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^reportFerryPilotReviews/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^getSelectedLicenseName$ modules-nct/edit-job/ajax.edit-job.php [QSA,L]
+RewriteRule ^getSelectedLicenseName/$ modules-nct/edit-job/ajax.edit-job.php [QSA,L]
+
+RewriteRule ^reportFeedPost$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^reportFeedPost/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^reportGroupPost$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+RewriteRule ^reportGroupPost/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+
+RewriteRule ^dashboard$ modules-nct/dashboard-nct/index.php [QSA,L]
+RewriteRule ^dashboard/$ modules-nct/dashboard-nct/index.php [QSA,L]
+
+RewriteRule ^inviteUserOnPlatform$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+RewriteRule ^inviteUserOnPlatform/$ modules-nct/profile-nct/ajax.profile-nct.php [QSA,L]
+
+RewriteRule ^searchConnection$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^searchConnection/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^searchFollowing$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^searchFollowing/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^searchFollower$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^searchFollower/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^searchPeopleyoumayknow$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^searchPeopleyoumayknow/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+
+RewriteRule ^recent-updates$ modules-nct/my-updates-nct/index.php?action=recent_updates [QSA,L]
+RewriteRule ^recent-updates/$ modules-nct/my-updates-nct/index.php?action=recent_updates [QSA,L]
+
+RewriteRule ^ajax/recent-updates$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=recent_updates [QSA,L]
+RewriteRule ^ajax/recent-updates/$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=recent_updates [QSA,L]
+
+RewriteRule ^ajax/recent-updates/currentPage/([0-9]+)$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=recent_updates&currentPage=$1 [QSA,L]
+RewriteRule ^ajax/recent-updates/currentPage/([0-9]+)/$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=recent_updates&currentPage=$1 [QSA,L]
+
+RewriteRule ^published-posts$ modules-nct/my-updates-nct/index.php?action=published_posts [QSA,L]
+RewriteRule ^published-posts/$ modules-nct/my-updates-nct/index.php?action=published_posts [QSA,L]
+
+RewriteRule ^ajax/published-posts$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=published_posts [QSA,L]
+RewriteRule ^ajax/published-posts/$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=published_posts [QSA,L]
+
+RewriteRule ^ajax/published-posts/currentPage/([0-9]+)$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=published_posts&currentPage=$1 [QSA,L]
+RewriteRule ^ajax/published-posts/currentPage/([0-9]+)/$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=published_posts&currentPage=$1 [QSA,L]
+
+RewriteRule ^saved-posts$ modules-nct/my-updates-nct/index.php?action=saved_posts [QSA,L]
+RewriteRule ^saved-posts/$ modules-nct/my-updates-nct/index.php?action=saved_posts [QSA,L]
+
+RewriteRule ^ajax/saved-posts$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=saved_posts [QSA,L]
+RewriteRule ^ajax/saved-posts/$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=saved_posts [QSA,L]
+
+RewriteRule ^ajax/saved-posts/currentPage/([0-9]+)$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=saved_posts&currentPage=$1 [QSA,L]
+RewriteRule ^ajax/saved-posts/currentPage/([0-9]+)/$ modules-nct/my-updates-nct/ajax.my-updates-nct.php?action=saved_posts&currentPage=$1 [QSA,L]
+
+RewriteRule ^like-unlike$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^like-unlike/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^post-comment$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^post-comment/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^getLikers/feed_id/([a-zA-Z0-9_=-]+)/currentPage/([0-9]+)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getLikers&feed_id=$1&currentPage=$2 [QSA,L]
+RewriteRule ^getLikers/feed_id/([a-zA-Z0-9_=-]+)/currentPage/([0-9]+)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getLikers&feed_id=$1&currentPage=$2 [QSA,L]
+
+RewriteRule ^getSharedBy/feed_id/([a-zA-Z0-9_=-]+)/currentPage/([0-9]+)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getSharedBy&feed_id=$1&currentPage=$2 [QSA,L]
+RewriteRule ^getSharedBy/feed_id/([a-zA-Z0-9_=-]+)/currentPage/([0-9]+)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getSharedBy&feed_id=$1&currentPage=$2 [QSA,L]
+
+RewriteRule ^getComments/feed_id/([a-zA-Z0-9_=-]+)/currentPage/([0-9]+)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getComments&feed_id=$1&currentPage=$2 [QSA,L]
+RewriteRule ^getComments/feed_id/([a-zA-Z0-9_=-]+)/currentPage/([0-9]+)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getComments&feed_id=$1&currentPage=$2 [QSA,L]
+
+RewriteRule ^getVisitors/currentPage/([0-9]+)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getVisitors&currentPage=$1 [QSA,L]
+RewriteRule ^getVisitors/currentPage/([0-9]+)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getVisitors&currentPage=$1 [QSA,L]
+
+RewriteRule ^post-an-update$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^post-an-update/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^share-an-update$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^share-an-update/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+### edit feed ###
+
+RewriteRule ^edit-feed/([a-zA-Z0-9_=-]+)$ modules-nct/edit-feed-nct/index.php?feed_id=$1 [QSA,L]
+RewriteRule ^edit-feed/([a-zA-Z0-9_=-]+)/$ modules-nct/edit-feed-nct/index.php?feed_id=$1 [QSA,L]
+
+
+RewriteRule ^editfeed$ modules-nct/edit-feed-nct/ajax.edit-feed-nct.php [QSA,L]
+RewriteRule ^editfeed/$ modules-nct/edit-feed-nct/ajax.edit-feed-nct.php [QSA,L]
+
+RewriteRule ^remove_edit_image$ modules-nct/edit-feed-nct/ajax.edit-feed-nct.php [QSA,L]
+RewriteRule ^remove_edit_image/$ modules-nct/edit-feed-nct/ajax.edit-feed-nct.php [QSA,L]
+
+RewriteRule ^remove_edit_video$ modules-nct/edit-feed-nct/ajax.edit-feed-nct.php [QSA,L]
+RewriteRule ^remove_edit_video/$ modules-nct/edit-feed-nct/ajax.edit-feed-nct.php [QSA,L]
+
+
+RewriteRule ^followCompany$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=followCompany [QSA,L]
+RewriteRule ^followCompany/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=followCompany [QSA,L]
+
+RewriteRule ^addConnection$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=addConnection [QSA,L]
+RewriteRule ^addConnection/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=addConnection [QSA,L]
+
+RewriteRule ^approveConnection$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=approveConnection [QSA,L]
+RewriteRule ^approveConnection/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=approveConnection [QSA,L]
+
+RewriteRule ^rejectConnection$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=rejectConnection [QSA,L]
+RewriteRule ^rejectConnection/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=rejectConnection [QSA,L]
+
+RewriteRule ^common-connection/([a-zA-Z0-9_=-]+)$ modules-nct/dashboard-nct/index.php?user_id=$1&action=getCommonConnection [QSA,L]
+RewriteRule ^common-connection/([a-zA-Z0-9_=-]+)/$ modules-nct/dashboard-nct/index.php?user_id=$1&action=getCommonConnection [QSA,L]
+
+RewriteRule ^connection/([a-zA-Z0-9_=-]+)$ modules-nct/dashboard-nct/index.php?user_id=$1&action=getConnection [QSA,L]
+RewriteRule ^connection/([a-zA-Z0-9_=-]+)/$ modules-nct/dashboard-nct/index.php?user_id=$1&action=getConnection [QSA,L]
+
+## get following 19/9/18 ##
+RewriteRule ^following/([a-zA-Z0-9_=-]+)$ modules-nct/dashboard-nct/index.php?user_id=$1&action=getFollowing [QSA,L]
+RewriteRule ^following/([a-zA-Z0-9_=-]+)/$ modules-nct/dashboard-nct/index.php?user_id=$1&action=getFollowing [QSA,L]
+
+## get follower 19/9/18 ##
+RewriteRule ^follower/([a-zA-Z0-9_=-]+)$ modules-nct/dashboard-nct/index.php?user_id=$1&action=getFollower [QSA,L]
+RewriteRule ^follower/([a-zA-Z0-9_=-]+)/$ modules-nct/dashboard-nct/index.php?user_id=$1&action=getFollower [QSA,L]
+
+
+
+RewriteRule ^people-you-may-know$ modules-nct/dashboard-nct/index.php?action=getPeopleYouKnow [QSA,L]
+RewriteRule ^people-you-may-know/$ modules-nct/dashboard-nct/index.php?action=getPeopleYouKnow [QSA,L]
+
+RewriteRule ^view-all-notification$ modules-nct/dashboard-nct/index.php?action=getAllNotification [QSA,L]
+RewriteRule ^view-all-notification/$ modules-nct/dashboard-nct/index.php?action=getAllNotification [QSA,L]
+
+RewriteRule ^view-all-notification/([a-zA-Z0-9_=-]+)$ modules-nct/dashboard-nct/index.php?action=getAllNotification&company_id=$1 [QSA,L]
+RewriteRule ^view-all-notification/([a-zA-Z0-9_=-]+)/$ modules-nct/dashboard-nct/index.php?action=getAllNotification&company_id=$1 [QSA,L]
+
+RewriteRule ^feed/([a-zA-Z0-9_=-]+)$ modules-nct/feed-nct/index.php?feed_id=$1 [QSA,L]
+RewriteRule ^feed/([a-zA-Z0-9_=-]+)/$ modules-nct/feed-nct/index.php?feed_id=$1 [QSA,L]
+
+
+
+RewriteRule ^invitation$ modules-nct/dashboard-nct/index.php?action=getInvitation [QSA,L]
+RewriteRule ^invitation/$ modules-nct/dashboard-nct/index.php?action=getInvitation [QSA,L]
+
+RewriteRule ^getCommonConnectionAjax$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^getCommonConnectionAjax/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^getConnectionAjax$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^getConnectionAjax/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^getFollowingAjax$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^getFollowingAjax/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^getFollowerAjax$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^getFollowerAjax/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+
+RewriteRule ^getNotificationAjax$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^getNotificationAjax/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^getPeopleYouKnowAjax$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^getPeopleYouKnowAjax/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^getPendingInvitationsAjax$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^getPendingInvitationsAjax/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^getSentInvitationsAjax$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^getSentInvitationsAjax/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+
+### Company ###
+RewriteRule ^company/my-companies$ modules-nct/companies-nct/index.php?type=my_companies [QSA,L]
+RewriteRule ^company/my-companies/$ modules-nct/companies-nct/index.php?type=my_companies [QSA,L]
+
+RewriteRule ^company/verifyCompany/([a-zA-Z0-9=_-]+)$ modules-nct/companies-nct/index.php?com_id=$1 [QSA,L]
+
+RewriteRule ^company/following-companies$ modules-nct/companies-nct/index.php?type=following_companies [QSA,L]
+RewriteRule ^company/following-companies/$ modules-nct/companies-nct/index.php?type=following_companies [QSA,L]
+
+RewriteRule ^getCompanies$ modules-nct/companies-nct/ajax.companies-nct.php [QSA,L]
+RewriteRule ^getCompanies/$ modules-nct/companies-nct/ajax.companies-nct.php [QSA,L]
+
+RewriteRule ^unfollowCompany$ modules-nct/companies-nct/ajax.companies-nct.php [QSA,L]
+RewriteRule ^unfollowCompany/$ modules-nct/companies-nct/ajax.companies-nct.php [QSA,L]
+
+RewriteRule ^create-company$ modules-nct/create-company-nct/index.php [QSA,L]
+RewriteRule ^create-company/$ modules-nct/create-company-nct/index.php [QSA,L]
+
+RewriteRule ^edit-company/([a-zA-Z0-9=_-]+)$ modules-nct/edit-company-nct/index.php?company_id=$1 [QSA,L]
+RewriteRule ^edit-company/([a-zA-Z0-9=_-]+)/$ modules-nct/edit-company-nct/index.php?company_id=$1 [QSA,L]
+
+RewriteRule ^update-company-details/([a-zA-Z0-9=_-]+)$ modules-nct/edit-company-nct/ajax.edit-company-nct.php?company_id=$1 [QSA,L]
+RewriteRule ^update-company-details/([a-zA-Z0-9=_-]+)/$ modules-nct/edit-company-nct/ajax.edit-company-nct.php?company_id=$1 [QSA,L]
+
+RewriteRule ^addCompanyLocation$ modules-nct/edit-company-nct/ajax.edit-company-nct.php [QSA,L]
+RewriteRule ^addCompanyLocation/$ modules-nct/edit-company-nct/ajax.edit-company-nct.php [QSA,L]
+
+
+RewriteRule ^getConnections$ modules-nct/edit-company-nct/ajax.edit-company-nct.php [QSA,L]
+RewriteRule ^getConnections/$ modules-nct/edit-company-nct/ajax.edit-company-nct.php [QSA,L]
+
+RewriteRule ^getConnectionBox$ modules-nct/edit-company-nct/ajax.edit-company-nct.php [QSA,L]
+RewriteRule ^getConnectionBox/$ modules-nct/edit-company-nct/ajax.edit-company-nct.php [QSA,L]
+
+RewriteRule ^deleteCompany$ modules-nct/edit-company-nct/ajax.edit-company-nct.php [QSA,L]
+RewriteRule ^deleteCompany/$ modules-nct/edit-company-nct/ajax.edit-company-nct.php [QSA,L]
+
+RewriteRule ^company/([0-9]+)$ modules-nct/company-detail-nct/index.php?company_id=$1 [QSA,L]
+RewriteRule ^company/([0-9]+)/$ modules-nct/company-detail-nct/index.php?company_id=$1 [QSA,L]
+
+RewriteRule ^rate_review/$ modules-nct/company-detail-nct/index.php [QSA,L]
+
+RewriteRule ^remove_company_follower$ modules-nct/company-detail-nct/ajax.company-detail-nct.php [QSA,L]
+RewriteRule ^remove_company_follower/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php [QSA,L]
+
+
+### Jobs ###
+RewriteRule ^jobs/my-jobs$ modules-nct/jobs-nct/index.php?type=my_jobs [QSA,L]
+RewriteRule ^jobs/my-jobs/$ modules-nct/jobs-nct/index.php?type=my_jobs [QSA,L]
+
+RewriteRule ^jobs/applied-jobs$ modules-nct/jobs-nct/index.php?type=applied_jobs [QSA,L]
+RewriteRule ^jobs/applied-jobs/$ modules-nct/jobs-nct/index.php?type=applied_jobs [QSA,L]
+
+RewriteRule ^jobs/saved-jobs$ modules-nct/jobs-nct/index.php?type=saved_jobs [QSA,L]
+RewriteRule ^jobs/saved-jobs/$ modules-nct/jobs-nct/index.php?type=saved_jobs [QSA,L]
+
+RewriteRule ^getJobs$ modules-nct/jobs-nct/ajax.jobs-nct.php [QSA,L]
+RewriteRule ^getJobs/$ modules-nct/jobs-nct/ajax.jobs-nct.php [QSA,L]
+
+RewriteRule ^removeJobs$ modules-nct/jobs-nct/ajax.jobs-nct.php [QSA,L]
+RewriteRule ^removeJobs/$ modules-nct/jobs-nct/ajax.jobs-nct.php [QSA,L]
+
+RewriteRule ^deleteJob$ modules-nct/jobs-nct/ajax.jobs-nct.php [QSA,L]
+RewriteRule ^deleteJob/$ modules-nct/jobs-nct/ajax.jobs-nct.php [QSA,L]
+
+RewriteRule ^withdrawAppliedJobs$ modules-nct/jobs-nct/ajax.jobs-nct.php [QSA,L]
+RewriteRule ^withdrawAppliedJobs/$ modules-nct/jobs-nct/ajax.jobs-nct.php [QSA,L]
+
+RewriteRule ^job/([a-zA-Z0-9=_-]+)$ modules-nct/job-detail-nct/index.php?job_id=$1 [QSA,L]
+RewriteRule ^job/([a-zA-Z0-9=_-]+)/$ modules-nct/job-detail-nct/index.php?job_id=$1 [QSA,L]
+
+RewriteRule ^create-job-form$ modules-nct/create-job-nct/index.php [QSA,L]
+RewriteRule ^create-job-form/$ modules-nct/create-job-nct/index.php [QSA,L]
+
+RewriteRule ^create-new-job$ modules-nct/create-job-nct/ajax.create-job-nct.php [QSA,L]
+RewriteRule ^create-new-job/$ modules-nct/create-job-nct/ajax.create-job-nct.php [QSA,L]
+
+RewriteRule ^edit-job-form/([a-zA-Z0-9=_-]+)$ modules-nct/edit-job-nct/index.php?job_id=$1 [QSA,L]
+RewriteRule ^edit-job-form/([a-zA-Z0-9=_-]+)/$ modules-nct/edit-job-nct/index.php?job_id=$1 [QSA,L]
+
+RewriteRule ^edit-job$ modules-nct/edit-job-nct/ajax.edit-job-nct.php [QSA,L]
+RewriteRule ^edit-job/$ modules-nct/edit-job-nct/ajax.edit-job-nct.php [QSA,L]
+
+RewriteRule ^addJobLocation$ modules-nct/edit-job-nct/ajax.edit-job-nct.php [QSA,L]
+RewriteRule ^addJobLocation/$ modules-nct/edit-job-nct/ajax.edit-job-nct.php [QSA,L]
+
+RewriteRule ^saveJobData$ modules-nct/edit-job-nct/ajax.edit-job-nct.php?action=saveJobData [QSA,L]
+RewriteRule ^saveJobData/$ modules-nct/edit-job-nct/ajax.edit-job-nct.php?action=saveJobData [QSA,L]
+
+RewriteRule ^similar-jobs/job/([a-zA-Z0-9=_-]+)/industry/([a-zA-Z0-9=_-]+)$ modules-nct/job-detail-nct/index.php?job_id=$1&industry_id=$2&action=getSimilarJob [QSA,L]
+RewriteRule ^similar-jobs/job/([a-zA-Z0-9=_-]+)/industry/([a-zA-Z0-9=_-]+)/$ modules-nct/job-detail-nct/index.php?job_id=$1&industry_id=$2&action=getSimilarJob [QSA,L]
+
+RewriteRule ^saveJobApplication$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+RewriteRule ^saveJobApplication/$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+
+RewriteRule ^saveDirectJobApplication$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+RewriteRule ^saveDirectJobApplication/$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+
+RewriteRule ^removeJobApplication$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+RewriteRule ^removeJobApplication/$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+
+RewriteRule ^saveJob$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+RewriteRule ^saveJob/$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+
+RewriteRule ^removeSavedJob$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+RewriteRule ^removeSavedJob/$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+
+RewriteRule ^getSimilarJobs$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+RewriteRule ^getSimilarJobs/$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+
+RewriteRule ^getJobApplicants$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+RewriteRule ^getJobApplicants/$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+
+RewriteRule ^job-applicants/job/([a-zA-Z0-9=_-]+)$ modules-nct/job-detail-nct/index.php?job_id=$1&action=getJobApplicants [QSA,L]
+RewriteRule ^job-applicants/job/([a-zA-Z0-9=_-]+)/$ modules-nct/job-detail-nct/index.php?job_id=$1&action=getJobApplicants [QSA,L]
+
+RewriteRule ^getSkillsForEditJob$ modules-nct/edit-job-nct/ajax.edit-job-nct.php [QSA,L]
+RewriteRule ^getSkillsForEditJob/$ modules-nct/edit-job-nct/ajax.edit-job-nct.php [QSA,L]
+
+RewriteRule ^getLicensesEndorsements$ modules-nct/edit-job-nct/ajax.edit-job-nct.php [QSA,L]
+RewriteRule ^getLicensesEndorsements/$ modules-nct/edit-job-nct/ajax.edit-job-nct.php [QSA,L]
+
+RewriteRule ^getDegreesForSuggestion$ modules-nct/edit-job-nct/ajax.edit-job-nct.php [QSA,L]
+RewriteRule ^getDegreesForSuggestion/$ modules-nct/edit-job-nct/ajax.edit-job-nct.php [QSA,L]
+
+RewriteRule ^shareNewsFeed$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+RewriteRule ^shareNewsFeed/$ modules-nct/job-detail-nct/ajax.job-detail-nct.php [QSA,L]
+
+RewriteRule ^shareCompanyNewsFeed$ modules-nct/company-detail-nct/ajax.company-detail-nct.php [QSA,L]
+RewriteRule ^shareCompanyNewsFeed/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php [QSA,L]
+
+
+### Groups ###
+RewriteRule ^groups/my-groups$ modules-nct/groups-nct/index.php?type=my_groups [QSA,L]
+RewriteRule ^groups/my-groups/$ modules-nct/groups-nct/index.php?type=my_groups [QSA,L]
+
+RewriteRule ^groups/joined-groups$ modules-nct/groups-nct/index.php?type=joined_groups [QSA,L]
+RewriteRule ^groups/joined-groups/$ modules-nct/groups-nct/index.php?type=joined_groups [QSA,L]
+
+RewriteRule ^getGroups$ modules-nct/groups-nct/ajax.groups-nct.php [QSA,L]
+RewriteRule ^getGroups/$ modules-nct/groups-nct/ajax.groups-nct.php [QSA,L]
+
+RewriteRule ^removeJoinedGroup$ modules-nct/groups-nct/ajax.groups-nct.php [QSA,L]
+RewriteRule ^removeJoinedGroup/$ modules-nct/groups-nct/ajax.groups-nct.php [QSA,L]
+
+RewriteRule ^create-group-form$ modules-nct/create-group-nct/index.php [QSA,L]
+RewriteRule ^create-group-form/$ modules-nct/create-group-nct/index.php [QSA,L]
+
+RewriteRule ^getConnectionsForGropus$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+RewriteRule ^getConnectionsForGropus/$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+
+RewriteRule ^deleteMember$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+RewriteRule ^deleteMember/$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+
+RewriteRule ^getConnectionBoxForGropus$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+RewriteRule ^getConnectionBoxForGropus/$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+
+RewriteRule ^create-new-group$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+RewriteRule ^create-new-group/$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+
+RewriteRule ^edit-group-form/([a-zA-Z0-9=_-]+)$ modules-nct/create-group-nct/index.php?group_id=$1 [QSA,L]
+RewriteRule ^edit-group-form/([a-zA-Z0-9=_-]+)/$ modules-nct/create-group-nct/index.php?group_id=$1 [QSA,L]
+
+RewriteRule ^group/([a-zA-Z0-9=_-]+)$ modules-nct/group-detail-nct/index.php?group_id=$1 [QSA,L]
+RewriteRule ^group/([a-zA-Z0-9=_-]+)/$ modules-nct/group-detail-nct/index.php?group_id=$1 [QSA,L]
+
+RewriteRule ^ask_to_join$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+RewriteRule ^ask_to_join/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+
+RewriteRule ^join_group$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+RewriteRule ^join_group/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+
+RewriteRule ^accept_group_invitation$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+RewriteRule ^accept_group_invitation/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+
+RewriteRule ^reject_group_invitation$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+RewriteRule ^reject_group_invitation/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+
+RewriteRule ^remove_group_member$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+RewriteRule ^remove_group_member/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+
+RewriteRule ^leave_group$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+RewriteRule ^leave_group/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+
+RewriteRule ^load-more-connection/group/([a-zA-Z0-9=_-]+)/page/([a-zA-Z0-9=_-]+)$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=loadMoreConnection&user_id=$1&page=$2 [QSA,L]
+RewriteRule ^load-more-connection/group/([a-zA-Z0-9=_-]+)/page/([a-zA-Z0-9=_-]+)/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=loadMoreConnection&user_id=$1&page=$2 [QSA,L]
+
+RewriteRule ^load-more-member/group/([a-zA-Z0-9=_-]+)/page/([a-zA-Z0-9=_-]+)$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=loadMoreMember&group_id=$1&page=$2 [QSA,L]
+RewriteRule ^load-more-member/group/([a-zA-Z0-9=_-]+)/page/([a-zA-Z0-9=_-]+)/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=loadMoreMember&group_id=$1&page=$2 [QSA,L]
+
+RewriteRule ^getGroupMember$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=getGroupMember [QSA,L]
+RewriteRule ^getGroupMember/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=getGroupMember [QSA,L]
+
+RewriteRule ^getNewsFeed$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=getNewsFeed [QSA,L]
+RewriteRule ^getNewsFeed/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=getNewsFeed [QSA,L]
+
+RewriteRule ^deleteGroup$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+RewriteRule ^deleteGroup/$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+
+RewriteRule ^messaging$ modules-nct/messages-nct/index.php [QSA,L]
+RewriteRule ^messaging/$ modules-nct/messages-nct/index.php [QSA,L]
+
+RewriteRule ^compose-message$ modules-nct/messages-nct/index.php?action=composeMessage [QSA,L]
+RewriteRule ^compose-message/$ modules-nct/messages-nct/index.php?action=composeMessage [QSA,L]
+
+RewriteRule ^getComposeMessageForm$ modules-nct/messages-nct/ajax.messages-nct.php [QSA,L]
+RewriteRule ^getComposeMessageForm/$ modules-nct/messages-nct/ajax.messages-nct.php [QSA,L]
+
+RewriteRule ^compose-message/([a-zA-Z0-9=_-]+)$ modules-nct/messages-nct/index.php?action=composeMessage&user_id=$1 [QSA,L]
+RewriteRule ^compose-message/([a-zA-Z0-9=_-]+)/$ modules-nct/messages-nct/index.php?action=composeMessage&user_id=$1 [QSA,L]
+
+RewriteRule ^getConversation$ modules-nct/messages-nct/ajax.messages-nct.php [QSA,L]
+RewriteRule ^getConversation/$ modules-nct/messages-nct/ajax.messages-nct.php [QSA,L]
+
+RewriteRule ^send-message$ modules-nct/messages-nct/ajax.messages-nct.php [QSA,L]
+RewriteRule ^send-message/$ modules-nct/messages-nct/ajax.messages-nct.php [QSA,L]
+
+RewriteRule ^send-message/([a-zA-Z0-9=_-]+)$ modules-nct/messages-nct/ajax.messages-nct.php?action=send_message&conversation_id=$1 [QSA,L]
+RewriteRule ^send-message/([a-zA-Z0-9=_-]+)/$ modules-nct/messages-nct/ajax.messages-nct.php?action=send_message&conversation_id=$1 [QSA,L]
+
+RewriteRule ^(getPreviousMessages|deleteMessage)$ modules-nct/messages-nct/ajax.messages-nct.php [QSA,L]
+RewriteRule ^(getPreviousMessages|deleteMessage)/$ modules-nct/messages-nct/ajax.messages-nct.php [QSA,L]
+
+RewriteRule ^messaging/thread/([a-zA-Z0-9=_-]+)$ modules-nct/messages-nct/index.php?conversation_id=$1 [QSA,L]
+RewriteRule ^messaging/thread/([a-zA-Z0-9=_-]+)/$ modules-nct/messages-nct/index.php?conversation_id=$1 [QSA,L]
+
+RewriteRule ^ajax/messaging/thread/([a-zA-Z0-9=_-]+)/currentPage/([0-9]+)$ modules-nct/messages-nct/ajax.messages-nct.php?conversation_id=$1&currentPage=$2 [QSA,L]
+RewriteRule ^ajax/messaging/thread/([a-zA-Z0-9=_-]+)/currentPage/([0-9]+)/$ modules-nct/messages-nct/ajax.messages-nct.php?conversation_id=$1&currentPage=$2 [QSA,L]
+
+RewriteRule ^ajax/getConversations/currentPage/([0-9]+)$ modules-nct/messages-nct/ajax.messages-nct.php?&currentPage=$1&action=getleft [QSA,L]
+RewriteRule ^ajax/getConversations/currentPage/([0-9]+)/$ modules-nct/messages-nct/ajax.messages-nct.php?&currentPage=$1&action=getleft [QSA,L]
+
+RewriteRule ^email/([a-zA-Z0-9=_-]+)/hash/([a-zA-Z0-9=_-]+)$ modules-nct/home-nct/newsletter-subscribe-nct.php?email=$1&hash=$2 [QSA,L]
+RewriteRule ^email/([a-zA-Z0-9=_-]+)/hash/([a-zA-Z0-9=_-]+)/$ modules-nct/home-nct/newsletter-subscribe-nct.php?email=$1&hash=$2 [QSA,L]
+
+RewriteRule ^unsubscribe_email/([a-zA-Z0-9=_-]+)/hash/([a-zA-Z0-9=_-]+)$ modules-nct/home-nct/newsletter-subscribe-nct.php?unsubscribe_email=$1&hash=$2 [QSA,L]
+RewriteRule ^unsubscribe_email/([a-zA-Z0-9=_-]+)/hash/([a-zA-Z0-9=_-]+)/$ modules-nct/home-nct/newsletter-subscribe-nct.php?unsubscribe_email=$1&hash=$2 [QSA,L]
+
+RewriteRule ^publish-post$ modules-nct/publish-post-nct/index.php [QSA,L]
+RewriteRule ^publish-post/$ modules-nct/publish-post-nct/index.php [QSA,L]
+
+RewriteRule ^publish-editpost/([a-zA-Z0-9_=-]+)$ modules-nct/publish-post-nct/index.php?feed_id=$1 [QSA,L]
+RewriteRule ^publish-editpost/([a-zA-Z0-9_=-]+)/$ modules-nct/publish-post-nct/index.php?feed_id=$1 [QSA,L]
+
+
+RewriteRule ^publish-post-save$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^publish-post-save/$ modules-nct/dashboard-post-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^remove_saved_post$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^remove_saved_post/$ modules-nct/dashboard-post-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^delete_post$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^delete_post/$ modules-nct/dashboard-post-nct/ajax.dashboard-nct.php [QSA,L]
+
+
+RewriteRule ^getPendingInvitations$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^getPendingInvitations/$ modules-nct/dashboard-post-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^getSentInvitations$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^getSentInvitations/$ modules-nct/dashboard-post-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^approve_invitation$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^approve_invitation/$ modules-nct/dashboard-post-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^deny_invitation$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^deny_invitation/$ modules-nct/dashboard-post-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^cancel_request$ modules-nct/dashboard-nct/ajax.dashboard-nct.php [QSA,L]
+RewriteRule ^cancel_request/$ modules-nct/dashboard-post-nct/ajax.dashboard-nct.php [QSA,L]
+
+RewriteRule ^add_new_post$ modules-nct/publish-post-nct/ajax.publish-post-nct.php [QSA,L]
+RewriteRule ^add_new_post/$ modules-nct/publish-post-nct/ajax.publish-post-nct.php [QSA,L]
+
+RewriteRule ^edit_post$ modules-nct/publish-post-nct/ajax.publish-post-nct.php [QSA,L]
+RewriteRule ^edit_post/$ modules-nct/publish-post-nct/ajax.publish-post-nct.php [QSA,L]
+
+RewriteRule ^getPreviousPosts$ modules-nct/publish-post-nct/ajax.publish-post-nct.php [QSA,L]
+RewriteRule ^getPreviousPosts/$ modules-nct/publish-post-nct/ajax.publish-post-nct.php [QSA,L]
+
+RewriteRule ^removeFeedImage$ modules-nct/publish-post-nct/ajax.publish-post-nct.php [QSA,L]
+RewriteRule ^removeFeedImage/$ modules-nct/publish-post-nct/ajax.publish-post-nct.php [QSA,L]
+
+RewriteRule ^search/users$ modules-nct/search-nct/index.php?entity=users [QSA,L]
+RewriteRule ^search/users/$ modules-nct/search-nct/index.php?entity=users [QSA,L]
+
+RewriteRule ^ajax/users$ modules-nct/search-nct/ajax.search-nct.php?entity=users [QSA,L]
+RewriteRule ^ajax/users/$ modules-nct/search-nct/ajax.search-nct.php?entity=users [QSA,L]
+
+RewriteRule ^search/jobs$ modules-nct/search-nct/index.php?entity=jobs [QSA,L]
+RewriteRule ^search/jobs/$ modules-nct/search-nct/index.php?entity=jobs [QSA,L]
+
+RewriteRule ^ajax/jobs$ modules-nct/search-nct/ajax.search-nct.php?entity=jobs [QSA,L]
+RewriteRule ^ajax/jobs/$ modules-nct/search-nct/ajax.search-nct.php?entity=jobs [QSA,L]
+
+RewriteRule ^search/companies$ modules-nct/search-nct/index.php?entity=companies [QSA,L]
+RewriteRule ^search/companies/$ modules-nct/search-nct/index.php?entity=companies [QSA,L]
+
+RewriteRule ^ajax/companies$ modules-nct/search-nct/ajax.search-nct.php?entity=companies [QSA,L]
+RewriteRule ^ajax/companies/$ modules-nct/search-nct/ajax.search-nct.php?entity=companies [QSA,L]
+
+RewriteRule ^search/groups$ modules-nct/search-nct/index.php?entity=groups [QSA,L]
+RewriteRule ^search/groups/$ modules-nct/search-nct/index.php?entity=groups [QSA,L]
+
+RewriteRule ^ajax/groups$ modules-nct/search-nct/ajax.search-nct.php?entity=groups [QSA,L]
+RewriteRule ^ajax/groups/$ modules-nct/search-nct/ajax.search-nct.php?entity=groups [QSA,L]
+
+RewriteRule ^getGroupInvitations/group/([a-zA-Z0-9=_-]+)$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=getGroupInvitations&group_id=$1 [QSA,L]
+RewriteRule ^getGroupInvitations/group/([a-zA-Z0-9=_-]+)/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=getGroupInvitations&group_id=$1 [QSA,L]
+
+RewriteRule ^load-more-group-invitation/group/([a-zA-Z0-9=_-]+)/page/([0-9]+)$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=loadMoreInvitation&group_id=$1&page=$2 [QSA,L]
+RewriteRule ^load-more-group-invitation/group/([a-zA-Z0-9=_-]+)/page/([0-9]+)/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=loadMoreInvitation&group_id=$1&page=$2 [QSA,L]
+
+RewriteRule ^load-more-companies/page/([a-zA-Z0-9=_-]+)$ modules-nct/search-nct/ajax.search-nct.php?action=loadMoreCompanies&page=$1 [QSA,L]
+RewriteRule ^load-more-companies/page/([a-zA-Z0-9=_-]+)/$ modules-nct/search-nct/ajax.search-nct.php?action=loadMoreCompanies&page=$1 [QSA,L]
+
+RewriteRule ^load-more-industries/page/([a-zA-Z0-9=_-]+)$ modules-nct/search-nct/ajax.search-nct.php?action=loadMoreIndustries&page=$1 [QSA,L]
+RewriteRule ^load-more-industries/page/([a-zA-Z0-9=_-]+)/$ modules-nct/search-nct/ajax.search-nct.php?action=loadMoreIndustries&page=$1 [QSA,L]
+
+RewriteRule ^load-more-feeds/page/([a-zA-Z0-9=_-]+)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=loadMoreFeeds&page=$1 [QSA,L]
+RewriteRule ^load-more-feeds/page/([a-zA-Z0-9=_-]+)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=loadMoreFeeds&page=$1 [QSA,L]
+
+RewriteRule ^load-more-company-feeds/page/([a-zA-Z0-9=_-]+)/([a-zA-Z0-9=_-]+)$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=loadMoreFeeds&page=$1&company_id=$2 [QSA,L]
+RewriteRule ^load-more-company-feeds/page/([a-zA-Z0-9=_-]+)/([a-zA-Z0-9=_-]+)/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=loadMoreFeeds&page=$1&company_id=$2 [QSA,L]
+
+RewriteRule ^load-more-group-feeds/page/([a-zA-Z0-9=_-]+)/([a-zA-Z0-9=_-]+)$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=loadMoreFeeds&page=$1&group_id=$2 [QSA,L]
+RewriteRule ^load-more-group-feeds/page/([a-zA-Z0-9=_-]+)/([a-zA-Z0-9=_-]+)/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=loadMoreFeeds&page=$1&group_id=$2 [QSA,L]
+
+RewriteRule ^load-more-groups/page/([a-zA-Z0-9=_-]+)$ modules-nct/search-nct/ajax.search-nct.php?action=loadMoreGroups&page=$1 [QSA,L]
+RewriteRule ^load-more-groups/page/([a-zA-Z0-9=_-]+)/$ modules-nct/search-nct/ajax.search-nct.php?action=loadMoreGroups&page=$1 [QSA,L]
+
+RewriteRule ^load-more-job-categories/page/([a-zA-Z0-9=_-]+)$ modules-nct/search-nct/ajax.search-nct.php?action=loadMoreJobCategories&page=$1 [QSA,L]
+RewriteRule ^load-more-job-categories/page/([a-zA-Z0-9=_-]+)/$ modules-nct/search-nct/ajax.search-nct.php?action=loadMoreJobCategories&page=$1 [QSA,L]
+
+RewriteRule ^load-more-company-sizes/page/([a-zA-Z0-9=_-]+)$ modules-nct/search-nct/ajax.search-nct.php?action=loadMoreCompanySizes&page=$1 [QSA,L]
+RewriteRule ^load-more-company-sizes/page/([a-zA-Z0-9=_-]+)/$ modules-nct/search-nct/ajax.search-nct.php?action=loadMoreCompanySizes&page=$1 [QSA,L]
+
+
+RewriteRule ^account-settings$ modules-nct/account-settings-nct/index.php [QSA,L]
+RewriteRule ^account-settings/$ modules-nct/account-settings-nct/index.php [QSA,L]
+
+RewriteRule ^change-password$ modules-nct/account-settings-nct/ajax.account-settings-nct.php [QSA,L]
+RewriteRule ^change-password/$ modules-nct/account-settings-nct/ajax.account-settings-nct.php [QSA,L]
+
+RewriteRule ^update-account-settings$ modules-nct/account-settings-nct/ajax.account-settings-nct.php [QSA,L]
+RewriteRule ^update-account-settings/$ modules-nct/account-settings-nct/ajax.account-settings-nct.php [QSA,L]
+
+RewriteRule ^getCompanyFollowers$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=getCompanyFollowers [QSA,L]
+RewriteRule ^getCompanyFollowers/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=getCompanyFollowers [QSA,L]
+
+RewriteRule ^load-more-follower/company/([a-zA-Z0-9=_-]+)/page/([0-9]+)$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=loadMoreFollower&company_id=$1&page=$2 [QSA,L]
+RewriteRule ^load-more-follower/company/([a-zA-Z0-9=_-]+)/page/([0-9]+)/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=loadMoreFollower&company_id=$1&page=$2 [QSA,L]
+
+RewriteRule ^load-more-jobs/company/([a-zA-Z0-9=_-]+)/page/([0-9]+)$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=loadMoreJob&company_id=$1&page=$2 [QSA,L]
+RewriteRule ^load-more-jobs/company/([a-zA-Z0-9=_-]+)/page/([0-9]+)/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=loadMoreJob&company_id=$1&page=$2 [QSA,L]
+
+RewriteRule ^getCompanyActivities/company/([a-zA-Z0-9=_-]+)$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=getCompanyActivities&company_id=$1 [QSA,L]
+RewriteRule ^getCompanyActivities/company/([a-zA-Z0-9=_-]+)/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=getCompanyActivities&company_id=$1 [QSA,L]
+
+RewriteRule ^getFollowerContent/company/([a-zA-Z0-9=_-]+)$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=getFollowerContent&company_id=$1 [QSA,L]
+RewriteRule ^getFollowerContent/company/([a-zA-Z0-9=_-]+)/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=getFollowerContent&company_id=$1 [QSA,L]
+
+RewriteRule ^getJobContent/company/([a-zA-Z0-9=_-]+)$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=getJobContent&company_id=$1 [QSA,L]
+RewriteRule ^getJobContent/company/([a-zA-Z0-9=_-]+)/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=getJobContent&company_id=$1 [QSA,L]
+
+RewriteRule ^getNotificationContent/company/([a-zA-Z0-9=_-]+)$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=getNotificationContent&company_id=$1 [QSA,L]
+RewriteRule ^getNotificationContent/company/([a-zA-Z0-9=_-]+)/$ modules-nct/company-detail-nct/ajax.company-detail-nct.php?action=getNotificationContent&company_id=$1 [QSA,L]
+
+RewriteRule ^load-more-messages/page/([0-9]+)$ modules-nct/notifications-nct/ajax.notifications-nct.php?action=loadMoreMessages&page=$1 [QSA,L]
+RewriteRule ^load-more-messages/page/([0-9]+)/$ modules-nct/notifications-nct/ajax.notifications-nct.php?action=loadMoreMessages&page=$1 [QSA,L]
+
+RewriteRule ^load-more-notification/type/([a-zA-Z0-9=_-]+)/page/([0-9]+)$ modules-nct/notifications-nct/ajax.notifications-nct.php?action=loadMoreNotification&type=$1&page=$2 [QSA,L]
+RewriteRule ^load-more-notification/type/([a-zA-Z0-9=_-]+)/page/([0-9]+)/$ modules-nct/notifications-nct/ajax.notifications-nct.php?action=loadMoreNotification&type=$1&page=$2 [QSA,L]
+
+RewriteRule ^mark_notifications_as_read$ modules-nct/notifications-nct/ajax.notifications-nct.php?action=mark_read [QSA,L]
+RewriteRule ^mark_notifications_as_read/$ modules-nct/notifications-nct/ajax.notifications-nct.php?action=mark_read [QSA,L]
+
+RewriteRule ^add-invitation$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+RewriteRule ^add-invitation/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php [QSA,L]
+
+RewriteRule ^saveUserName$ modules-nct/profile-nct/ajax.profile-nct.php?action=saveUserName [QSA,L]
+RewriteRule ^saveUserName/$ modules-nct/profile-nct/ajax.profile-nct.php?action=saveUserName [QSA,L]
+
+RewriteRule ^payment-history$ modules-nct/payment-history-nct/index.php [QSA,L]
+RewriteRule ^payment-history/$ modules-nct/payment-history-nct/index.php [QSA,L]
+
+RewriteRule ^getTransaction$ modules-nct/payment-history-nct/ajax.payment-history-nct.php [QSA,L]
+RewriteRule ^getTransaction/$ modules-nct/payment-history-nct/ajax.payment-history-nct.php [QSA,L]
+
+RewriteRule ^language/([0-9]+)/?$ modules-nct/language-nct/index.php?lid=$1 [QSA,L]
+
+
+##post-activity
+
+RewriteRule ^post_recent-updates$ modules-nct/post-activity-nct/index.php?action=post_recent_updates [QSA,L]
+RewriteRule ^post_recent-updates/$ modules-nct/post-activity-nct/index.php?action=post_recent_updates [QSA,L]
+
+RewriteRule ^ajax/post_recent-updates$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_recent_updates [QSA,L]
+RewriteRule ^ajax/post_recent-updates/$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_recent_updates [QSA,L]
+
+RewriteRule ^ajax/post_recent-updates/currentPage/([0-9]+)$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_recent_updates&currentPage=$1 [QSA,L]
+RewriteRule ^ajax/post_recent-updates/currentPage/([0-9]+)/$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_recent_updates&currentPage=$1 [QSA,L]
+
+RewriteRule ^post_published-posts$ modules-nct/post-activity-nct/index.php?action=post_published_posts [QSA,L]
+RewriteRule ^post_published-posts/$ modules-nct/post-activity-nct/index.php?action=post_published_posts [QSA,L]
+
+RewriteRule ^ajax/post_published-posts$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_published_posts [QSA,L]
+RewriteRule ^ajax/post_published-posts/$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_published_posts [QSA,L]
+
+RewriteRule ^ajax/post_published-posts/currentPage/([0-9]+)$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_published_posts&currentPage=$1 [QSA,L]
+RewriteRule ^ajax/post_published-posts/currentPage/([0-9]+)/$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_published_posts&currentPage=$1 [QSA,L]
+
+RewriteRule ^post_saved-posts$ modules-nct/post-activity-nct/index.php?action=post_saved_posts [QSA,L]
+RewriteRule ^post_saved-posts/$ modules-nct/post-activity-nct/index.php?action=post_saved_posts [QSA,L]
+
+RewriteRule ^ajax/post_saved-posts$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_saved_posts [QSA,L]
+RewriteRule ^ajax/post_saved-posts/$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_saved_posts [QSA,L]
+
+RewriteRule ^ajax/post_saved-posts/currentPage/([0-9]+)$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_saved_posts&currentPage=$1 [QSA,L]
+RewriteRule ^ajax/post_saved-posts/currentPage/([0-9]+)/$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_saved_posts&currentPage=$1 [QSA,L]
+
+RewriteRule ^post_all_activity$ modules-nct/post-activity-nct/index.php?action=post_all_activity [QSA,L]
+RewriteRule ^post_all_activity/$ modules-nct/post-activity-nct/index.php?action=post_all_activity [QSA,L]
+
+RewriteRule ^ajax/post_all_activity$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_all_activity [QSA,L]
+RewriteRule ^ajax/post_all_activity/$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_all_activity [QSA,L]
+
+RewriteRule ^ajax/post_all_activity/currentPage/([0-9]+)$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_all_activity&currentPage=$1 [QSA,L]
+RewriteRule ^ajax/post_all_activity/currentPage/([0-9]+)/$ modules-nct/post-activity-nct/ajax.post-activity-nct.php?action=post_saved_posts&currentPage=$1 [QSA,L]
+
+RewriteRule ^getInvitationForGroups$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+RewriteRule ^getInvitationForGroups/$ modules-nct/create-group-nct/ajax.create-group-nct.php [QSA,L]
+
+RewriteRule ^ajax/getUsersBeforeLogin/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/search-nct/ajax.search-nct.php?action=getUsersBeforeLogin&currentPage=$1&keyword=$2 [QSA,L]
+RewriteRule ^ajax/getUsersBeforeLogin/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/search-nct/ajax.search-nct.php?action=getUsersBeforeLogin&currentPage=$1&keyword=$2 [QSA,L]
+
+RewriteRule ^ajax/getCompaniesBeforeLogin/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/search-nct/ajax.search-nct.php?action=getCompaniesBeforeLogin&currentPage=$1&keyword=$2 [QSA,L]
+RewriteRule ^ajax/getCompaniesBeforeLogin/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/search-nct/ajax.search-nct.php?action=getCompaniesBeforeLogin&currentPage=$1&keyword=$2 [QSA,L]
+
+RewriteRule ^ajax/getUsers/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/search-nct/ajax.search-nct.php?action=getUsers&currentPage=$1&keyword=$2 [QSA,L]
+RewriteRule ^ajax/getUsers/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/search-nct/ajax.search-nct.php?action=getUsers&currentPage=$1&keyword=$2 [QSA,L]
+
+RewriteRule ^ajax/getJobs/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/search-nct/ajax.search-nct.php?action=getJobs&currentPage=$1&keyword=$2 [QSA,L]
+RewriteRule ^ajax/getJobs/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/search-nct/ajax.search-nct.php?action=getJobs&currentPage=$1&keyword=$2 [QSA,L]
+
+RewriteRule ^ajax/getCompanies/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/search-nct/ajax.search-nct.php?action=getCompanies&currentPage=$1&keyword=$2 [QSA,L]
+RewriteRule ^ajax/getCompanies/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/search-nct/ajax.search-nct.php?action=getCompanies&currentPage=$1&keyword=$2 [QSA,L]
+
+RewriteRule ^ajax/getGroups/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/search-nct/ajax.search-nct.php?action=getGroups&currentPage=$1&keyword=$2 [QSA,L]
+RewriteRule ^ajax/getGroups/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/search-nct/ajax.search-nct.php?action=getGroups&currentPage=$1&keyword=$2 [QSA,L]
+
+RewriteRule ^ajax/getPeopleYouKnow_load/currentPage/([0-9]+)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getPeopleYouKnow_load&currentPage=$1 [QSA,L]
+RewriteRule ^ajax/getPeopleYouKnow_load/currentPage/([0-9]+)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getPeopleYouKnow_load&currentPage=$1 [QSA,L]
+
+RewriteRule ^ajax/getConnection_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getConnection_load&currentPage=$1&keyword=$2 [QSA,L]
+RewriteRule ^ajax/getConnection_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getConnection_load&currentPage=$1&keyword=$2 [QSA,L]
+
+
+RewriteRule ^ajax/getInvitation_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?type=getInvitation_load&currentPage=$1&action=$2 [QSA,L]
+RewriteRule ^ajax/getInvitation_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?type=getInvitation_load&currentPage=$1&action=$2 [QSA,L]
+
+
+RewriteRule ^ajax/getFollowing_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getFollowing_load&currentPage=$1&keyword=$2 [QSA,L]
+RewriteRule ^ajax/getFollowing_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getFollowing_load&currentPage=$1&keyword=$2 [QSA,L]
+
+RewriteRule ^ajax/getFollower_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getFollower_load&currentPage=$1&keyword=$2 [QSA,L]
+RewriteRule ^ajax/getFollower_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getFollower_load&currentPage=$1&keyword=$2 [QSA,L]
+
+RewriteRule ^ajax/getCommonConnection_load/currentPage/([0-9]+)/([0-9]*)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getCommonConnection_load&currentPage=$1&user_id=$2 [QSA,L]
+RewriteRule ^ajax/getCommonConnection_load/currentPage/([0-9]+)/([0-9]*)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getCommonConnection_load&currentPage=$1&user_id=$2 [QSA,L]
+
+RewriteRule ^ajax/getNotification_Load/currentPage/([0-9]+)$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getNotification_Load&currentPage=$1 [QSA,L]
+RewriteRule ^ajax/getNotification_Load/currentPage/([0-9]+)/$ modules-nct/dashboard-nct/ajax.dashboard-nct.php?action=getNotification_Load&currentPage=$1 [QSA,L]
+
+
+
+RewriteRule ^ajax/getCompanies_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/companies-nct/ajax.companies-nct.php?action=getCompanies&currentPage=$1&type=$2 [QSA,L]
+RewriteRule ^ajax/getCompanies_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/companies-nct/ajax.companies-nct.php?action=getCompanies&currentPage=$1&type=$2 [QSA,L]
+
+RewriteRule ^ajax/getJobs_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/jobs-nct/ajax.jobs-nct.php?action=getJobs&currentPage=$1&type=$2 [QSA,L]
+RewriteRule ^ajax/getJobs_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/jobs-nct/ajax.jobs-nct.php?action=getJobs&currentPage=$1&type=$2 [QSA,L]
+
+RewriteRule ^ajax/getGroups_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)$ modules-nct/groups-nct/ajax.groups-nct.php?action=getGroups&currentPage=$1&type=$2 [QSA,L]
+RewriteRule ^ajax/getGroups_load/currentPage/([0-9]+)/([a-zA-Z0-9=_-]*)/$ modules-nct/groups-nct/ajax.groups-nct.php?action=getGroups&currentPage=$1&type=$2 [QSA,L]
+
+RewriteRule ^getGroupmember_load/group/([a-zA-Z0-9=_-]+)/page/([a-zA-Z0-9=_-]+)$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=loadMoreMember_new&group_id=$1&page=$2 [QSA,L]
+RewriteRule ^getGroupmember_load/group/([a-zA-Z0-9=_-]+)/page/([a-zA-Z0-9=_-]+)/$ modules-nct/group-detail-nct/ajax.group-detail-nct.php?action=loadMoreMember_new&group_id=$1&page=$2 [QSA,L]
+
+RewriteRule ^ajax/payment_load/currentPage/([0-9]+)$ modules-nct/payment-history-nct/ajax.payment-history-nct.php?action=payment_load&page=$1 [QSA,L]
+RewriteRule ^ajax/payment_load/currentPage/([0-9]+)/$ modules-nct/payment-history-nct/ajax.payment-history-nct.php?action=payment_load&page=$1 [QSA,L]
+
+RewriteRule ^signin$ modules-nct/home-nct/index.php?action=signin_new [QSA,L]
+RewriteRule ^signin/$ modules-nct/home-nct/index.php?action=signin_new [QSA,L]
+
+
+RewriteRule ^ajax/getJobs_applicant/currentPage/([0-9]+)$ modules-nct/job-detail-nct/ajax.job-detail-nct.php?action=getJobApplicants&currentPage=$1 [QSA,L]
+RewriteRule ^ajax/getJobs_applicant/currentPage/([0-9]+)/$ modules-nct/job-detail-nct/ajax.job-detail-nct.php?action=getJobApplicants&currentPage=$1 [QSA,L]
+
+
+RewriteRule ^unsubscribe/([A-Za-z0-9=._-]+)/?$ modules-nct/unsubscribe-nct/index.php?subscriberId=$1
+
+
+#### web services 19-May###
+RewriteRule ^api_new-newsfeed/?$ api_new-nct/newsfeed.php [QSA,L]
+RewriteRule ^api_new-signin/?$ api_new-nct/signin.php [QSA,L]
+RewriteRule ^(api_new-share-update|api_new-publish-post|api_new-post-comment)/?$ api_new-nct/update.php [QSA,L]
+RewriteRule ^api_new-publish/?$ api_new-nct/publish-post-nct.php [QSA,L]
+RewriteRule ^api_new-like-unlike/?$ api_new-nct/like_unlike.php
+RewriteRule ^api_new-notifications/?$ api_new-nct/notifications.php
+RewriteRule ^api_new-messages/?$ api_new-nct/message.php
+RewriteRule ^api_new-invitaion-people-you-know/?$ api_new-nct/invitaion-people-you-know-nct.php
+RewriteRule ^api_new-my-connections/?$ api_new-nct/my-connections-nct.php
+RewriteRule ^api_new-my-all-connections/?$ api_new-nct/my-connections-nct.php?action=get_all_connections [QSA,L]
+RewriteRule ^api_new-my-groups/?$ api_new-nct/my-groups-nct.php
+
+
+
+####new web services 20-May###
+RewriteRule ^api_new-create-edit-groups/?$ api_new-nct/create-edit-groups-nct.php
+RewriteRule ^api_new-get-group-types/?$ api_new-nct/create-edit-groups-nct.php?action=group_type [QSA,L]
+RewriteRule ^api_new-get-group-industrys/?$ api_new-nct/create-edit-groups-nct.php?action=group_industry [QSA,L]
+RewriteRule ^api_new-remove-group-member/?$ api_new-nct/group-detail-nct.php
+RewriteRule ^api_new-group-join-requests/?$ api_new-nct/group-detail-nct.php
+RewriteRule ^api_new-group-feeds/?$ api_new-nct/group-detail-nct.php
+RewriteRule ^api_new-group-detail/?$ api_new-nct/group-detail-nct.php
+RewriteRule ^api_new-delete-group/?$ api_new-nct/create-edit-groups-nct.php
+RewriteRule ^api_new-accept-group-invitation/?$ api_new-nct/group-detail-nct.php
+RewriteRule ^api_new-join-leave-group/?$ api_new-nct/group-detail-nct.php
+RewriteRule ^api_new-ask-to-join-group/?$ api_new-nct/group-detail-nct.php
+RewriteRule ^api_new-withdrow-request-group/?$ api_new-nct/group-detail-nct.php
+RewriteRule ^api_new-reject-group-join-request/?$ api_new-nct/group-detail-nct.php
+RewriteRule ^api_new-group-invitation-suggestion/?$ api_new-nct/create-edit-groups-nct.php?action=group_invitation [QSA,L]
+RewriteRule ^api_new-group-invitation-send/?$ api_new-nct/group-detail-nct.php?action=group_invitation_send [QSA,L]
+RewriteRule ^api_new-view-edit-group/?$ api_new-nct/create-edit-groups-nct.php
+
+RewriteRule ^api_new-profile/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-save-basic-profile/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-add-edit-education/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-get-language-suggestion/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-add-languages/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-remove-languages/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-skills-suggestion/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-add-skills/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-remove-skills/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-get-companies-suggestion/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-get-company-location/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-add-edit-experience/?$ api_new-nct/profile-nct.php
+
+RewriteRule ^api_new-(my|following)-companies/?$ api_new-nct/companies-nct.php?action=$1_companies [QSA,L]
+
+RewriteRule ^api_new-create-company/?$ api_new-nct/create-company-nct.php
+RewriteRule ^api_new-edit-company/?$ api_new-nct/edit-company-nct.php
+RewriteRule ^api_new-get-company-sizes/?$ api_new-nct/create-company-nct.php
+RewriteRule ^api_new-view-edit-company/?$ api_new-nct/edit-company-nct.php
+
+RewriteRule ^api_new-company/?$ api_new-nct/company-detail-nct.php
+
+RewriteRule ^api_new-unfollow-company/?$ api_new-nct/companies-nct.php?action=unfollow [QSA,L]
+
+RewriteRule ^api_new-follow-company/?$ api_new-nct/newsfeed.php?action=follow [QSA,L]
+
+RewriteRule ^api_new-jobs/?$ api_new-nct/jobs-nct.php
+RewriteRule ^api_new-create-job/?$ api_new-nct/create-job-nct.php
+RewriteRule ^api_new-edit-job/?$ api_new-nct/edit-job-nct.php
+RewriteRule ^api_new-job-category/?$ api_new-nct/create-job-nct.php?action=categories [QSA,L]
+RewriteRule ^api_new-view-edit-job/?$ api_new-nct/edit-job-nct.php
+
+RewriteRule ^api_new-job-detail/?$ api_new-nct/job-detail-nct.php
+
+RewriteRule ^api_new-search-groups/?$ api_new-nct/search-nct.php?entity=groups [QSA,L]
+RewriteRule ^api_new-search-companies/?$ api_new-nct/search-nct.php?entity=companies [QSA,L]
+RewriteRule ^api_new-search-jobs/?$ api_new-nct/search-nct.php?entity=jobs [QSA,L]
+RewriteRule ^api_new-search-users/?$ api_new-nct/search-nct.php?entity=users [QSA,L]
+
+RewriteRule ^api_new-connection-operation/?$ api_new-nct/dashboard-nct.php?entity=connection-operation [QSA,L]
+
+RewriteRule ^api_new-remove-from-connection/?$ api_new-nct/profile-nct.php
+RewriteRule ^api_new-dashboard/?$ api_new-nct/dashboard-nct.php [QSA,L]
+
+RewriteRule ^api_new-payment-history/?$ api_new-nct/payment-history-nct.php
+
+RewriteRule ^api_new-membership-plans/?$ api_new-nct/membership-plans-nct.php
+
+RewriteRule ^api_new-message/?$ api_new-nct/messages-nct.php [QSA,L]
+
+RewriteRule ^api_new-account-settings/?$ api_new-nct/account-settings-nct.php
+
+RewriteRule ^api_new-forgot-password/?$ modules-nct/home-nct/index.php?platform=app [QSA,L]
+
+RewriteRule ^api_new-home/?$ api_new-nct/home-nct.php
+
+RewriteRule ^api_new-logout/?$ api_new-nct/logout-nct.php
+
+RewriteRule ^api_new-updates/?$ api_new-nct/updates-nct.php
+
+RewriteRule ^api_new-sample-notify/?$ api_new-nct/sample-notify-nct.php
+
+##app update 21-June-2018##
+RewriteRule ^api_new-app_update/?$  api_new-nct/app_update.php
+##app update 21-June-2018##
+
+
+### Start Checkout URLs FOR APP ###
+RewriteRule ^checkout/txn_id_app/([0-9]+)/(.*)$ modules-nct/checkout-nct/index.php?userId=$1&ph_id=$2 [QSA,L]
+RewriteRule ^checkout/txn_id_app/([0-9]+)/(.*)/$ modules-nct/checkout-nct/index.php?userId=$1&ph_id=$2 [QSA,L]
+
+##follow 29-9-18##
+RewriteRule ^api_new-my-following/?$ api_new-nct/my-following-nct.php
+RewriteRule ^api_new-my-follower/?$ api_new-nct/my-follower-nct.php
+RewriteRule ^api_new-post_activities/?$ api_new-nct/post_activities-nct.php
+
+
+##follow 17-11-18##
+RewriteRule ^api_new-resend_email/?$ api_new-nct/resend-verification-email-nct.php
+
+
+
+#################################################################################################################################################
+#                                                                                                                                               #
+#                                               Image resizing on the fly ( using cimage )                                                      #
+#                                                                                                                                               #
+#################################################################################################################################################
+#RewriteRule ^image/(.*)$ includes-nct/cimage-nct/webroot/img.php?src=$1&fill-to-fit=FFFFFF&make-transparent=000000 [QSA,NC,L]
+RewriteRule ^image/(.*)$ includes-nct/cimage-nct/webroot/img.php?src=$1&fill-to-fit=FFFFFF&make-transparent=000000&nu [QSA,NC,L]
+#RewriteRule ^image/(.*)$ includes-nct/cimage-nct/webroot/img.php?src=$1&make-transparent=000000&nu [QSA,NC,L]
+#RewriteRule ^image/(.*)$ includes-nct/cimage-nct/webroot/img.php?src=$1&&cf [QSA,NC,L]
+
+RewriteRule ^theme-image/(.*)$ includes-nct/cimage-nct/webroot/theme-img.php?src=$1&fill-to-fit=FFFFFF&make-transparent=000000&nu [QSA,NC,L]
+
+
+<IfModule mod_deflate.c>
+  # Compress HTML, CSS, JavaScript, Text, XML and fonts
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+
+  # Remove browser bugs (only needed for really old browsers)
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  Header append Vary User-Agent
+</IfModule>

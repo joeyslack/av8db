@@ -1,0 +1,1 @@
+<div class="feed-image-container-main"><div class="feed-image-container"><img class="post_image" src="%IMAGE_URL%" alt="%IMAGE_NAME%" /></div></div>

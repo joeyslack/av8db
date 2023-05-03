@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" class="fa fa-close gray-text remove_skill"  data-skill-id="%ENC_SKILL_ID%"></a>

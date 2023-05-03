@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" title="{LBL_ADD_LICENSES_ENDORSEMENTS}" id="add_licenses_endorsement"><i class="icon-plus"></i></a>

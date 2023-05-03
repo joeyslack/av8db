@@ -1,0 +1,1 @@
+<li class="liker post-cell"><span class="main-post-img"><a href="%USER_PROFILE_URL%" class="blue-color" title="%USER_NAME_FULL%">%USER_PROFILE_PICTURE%</a></span><h4 class="clearfix"><a href="%USER_PROFILE_URL%" class="blue-color" title="%USER_NAME_FULL%"><strong>%USER_NAME_FULL%</strong></a></h4><h5>%HEADLINE%</h5></li>

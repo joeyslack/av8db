@@ -1,0 +1,1 @@
+<div class="no-feeds">{LBL_GRP_DTL_NO_FEED_FOUND}</div>

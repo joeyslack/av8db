@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" title="{LBL_ADD_LANGUAGES}" id="add_languages"><i class="icon-plus"></i></a>

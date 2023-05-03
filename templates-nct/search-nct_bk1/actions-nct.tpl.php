@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" class="blue-color %CLASS%" title="%TITLE%"><i class="fa fa-pencil"></i></a>

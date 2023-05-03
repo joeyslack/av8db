@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" title="{LBL_ADD_EDUCATION}" id="add_education"><i class="icon-plus"></i></a>

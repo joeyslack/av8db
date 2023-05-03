@@ -1,0 +1,1 @@
+<a href="javascript:void(0);" id="%ID%" data-value="%DATA-VALUE%" class="mg-top10 %CLASS%" title="%TITLE%">%TEXT%</a>
